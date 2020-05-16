@@ -7,7 +7,7 @@
         <script src="js/main.js"></script>
     </head>
 
-    <body onload="test()">
+    <body onload="calculateAfterDiscounts()">
         <div class="container">
             <form>
                 <div class="formContainer">
@@ -22,7 +22,7 @@
                             type="range"
                             min="1"
                             max="6"
-                            value="3"
+                            value="4"
                             class="slider"
                             id="myRangeOne"
                         />
@@ -37,7 +37,7 @@
                             type="range"
                             min="0"
                             max="100"
-                            value="50"
+                            value="100"
                             step="5"
                             class="slider"
                             id="myRangeTwo"
@@ -53,7 +53,7 @@
                             id="aveShopper"
                             class="regInput"
                             type="number"
-                            value="50"
+                            value="100"
                         />
                     </div>
                 </div>
@@ -104,7 +104,7 @@
                                 </td>
                                 <td>
                                      <label>
-                                            Assumed <span id="displayRangeR2C1">50%</span>
+                                            Assumed <span id="displayRangeR2C1">50</span>%
                                              of participating Shoppers selected your Nonprofit as their Favorite Nonprofit
                                     </label>
                                     <input
@@ -133,7 +133,7 @@
                                 </td>
                                 <td>
                                     <label>
-                                        Assumed <span id="displayRangeR3C1">95%</span>
+                                        Assumed <span id="displayRangeR3C1">95</span>%
                                         of participating Businesses selected your Nonprofit as their Favorite Nonprofit
                                     </label>
                                     <input
@@ -164,9 +164,8 @@
                                 </td>
                                 <td>
                                     <label>
-                                        Assumed <span id="displayRangeR4C1">70%</span>
-                                        of the <span id="displayRangeR4C2">90%</span>
-                                        of participating Shoppers selected your Nonprofit as the referral 
+                                        Assumed <span id="displayRangeR4C1">70</span>%
+                                        of the 
                                     </label>
                                 <input
                                     type="range"
@@ -175,16 +174,21 @@
                                     value="95"
                                     step="5"
                                     class="slider"
-                                    id="myRangeR4I1"
+                                    id="myRangeR4C1"
                                 /></td>
-                                <td><input
+                                <td>
+                                <label>
+                                    <span id="displayRangeR4C2">90</span>%
+                                        of participating Shoppers selected your Nonprofit as the referral 
+                                </label>
+                                <input
                                     type="range"
                                     min="0"
                                     max="100"
                                     value="95"
                                     step="5"
                                     class="slider"
-                                    id="myRangeR4I2"
+                                    id="myRangeR4C2"
                                 /></td>
                             </tr>
                             <tr>
@@ -203,12 +207,11 @@
                                         </h4>
                                     </div>
                                 </td>
-                                <td>
+                                <td> 
                                     <label>
-                                        Assumed <span id="displayRangeR5C1">70%</span>
-                                        of the <span id="displayRangeR5C2">95%</span>
-                                        of participating Businesses selected your Nonprofit as the referral 
-                                    </label>    
+                                        Assumed <span id="displayRangeR5C1">70</span>%
+                                        of the
+                                    </label>   
                                 <input
                                     type="range"
                                     min="0"
@@ -217,8 +220,13 @@
                                     step="5"
                                     class="slider"
                                     id="myRangeR5C1"
-                                /></td>
-                                <td><input
+                                />
+                                <td>
+                                <label>
+                                    <span id="displayRangeR5C2">95</span>%
+                                        of participating Businesses selected your Nonprofit as the referral 
+                                </label>
+                                <input
                                     type="range"
                                     min="0"
                                     max="100"
@@ -233,7 +241,7 @@
                         <div class="results">
                             <div class="formItem">
                                 <h3>
-                                    Possible Revenue Received per Year from Campaigns: <br />
+                                    Possible Revenue Received per Year from Campaigns: 11% <br />
                                     <span style="color: #81cf44;">$</span>
                                     <span id="resultRevenue"></span>
                                 </h3>
@@ -287,16 +295,17 @@
         var total = numVirutalCampaignsYr * numShoppersPerCampaign * aveShopper;
 
         outputThree.innerText = total;
+        calculateRevenue();
     }
 
     // Virtual Campaign Revenue Received ===================================
     /* sorry for lazy code it was 2am*/
     // get result div 
     var resultSplit1 = document.getElementById("resultSplit1");
-    var resultSplit1 = document.getElementById("resultSplit2");
-    var resultSplit1 = document.getElementById("resultSplit3");
-    var resultSplit1 = document.getElementById("resultSplit4");
-    var resultSplit1 = document.getElementById("resultSplit5");
+    var resultSplit2 = document.getElementById("resultSplit2");
+    var resultSplit3 = document.getElementById("resultSplit3");
+    var resultSplit4 = document.getElementById("resultSplit4");
+    var resultSplit5 = document.getElementById("resultSplit5");
     
     // get range val
     var sliderR2C1 = document.getElementById("myRangeR2C1");
@@ -323,6 +332,7 @@
     sliderR5C2.oninput = function() { outputR5C2.innerHTML = this.value; calculateRevenue();}
 
     function calculateRevenue() {
+        // get vals for calculations
         var valR2C1 = Number(document.getElementById("displayRangeR2C1").innerText);       
         var valR3C1 = Number(document.getElementById("displayRangeR3C1").innerText);
         var valR4C1 = Number(document.getElementById("displayRangeR4C1").innerText);
@@ -330,7 +340,27 @@
         var valR5C1 = Number(document.getElementById("displayRangeR5C1").innerText);
         var valR5C2 = Number(document.getElementById("displayRangeR5C2").innerText);
         
+        // calculate 6% Guaranteed to Nonprofit Campaign Host 
+        resultSplit1.innerText = (0.06) * (Number(outputThree.innerText));
 
+        // calcualte 2% If Favorit Nonprofit of Shopper 
+        resultSplit2.innerText = (0.02) * (Number(outputThree.innerText)) * (Number(valR2C1)/100);
 
+        // calculate 2% if Favorite Nonprofit of Business 
+        resultSplit3.innerText = (0.02) * (Number(outputThree.innerText)) * (Number(valR3C1)/100);
+
+        // calculate 0.05% If shopper referral was assigned to Nonprofit 
+        resultSplit4.innerText = (0.005) * (Number(outputThree.innerText)) * (Number(valR4C1)/100) * (Number(valR4C2)/100);
+        
+        // calculate 0.05% if Business referral was assigned to Nonprofit 
+        resultSplit5.innerText = (0.005) * (Number(outputThree.innerText)) * (Number(valR5C1)/100) * (Number(valR5C2)/100);
+
+        // calculate Possible Revenue Received per Year from Campaigns
+        document.getElementById("resultRevenue").innerText = 
+            (Number(resultSplit1.innerText)) +
+            (Number(resultSplit2.innerText)) +
+            (Number(resultSplit3.innerText)) +
+            (Number(resultSplit4.innerText)) +
+            (Number(resultSplit5.innerText)) ;
 }
 </script>
