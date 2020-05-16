@@ -1,85 +1,336 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Calculator</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script type="text/javascript" src="jquery-3.3.1.js"></script>
-    <script src="js/main.js"></script>
-</head>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <script type="text/javascript" src="jquery-3.3.1.js"></script>
+        <script src="js/main.js"></script>
+    </head>
 
-<body onload="test()">
-    <div class="container">
-        
-        <form>
-            <div class="formContainer">
-                <h1>PieShares Calculator</h1>
-                <div class="slidecontainer">
-                    <label><span id="displayRangeOne"></span> Virtual Campaigns per Year</label>
-                    <input type="range" min="1" max="6" value="3" class="slider" id="myRangeOne">
+    <body onload="test()">
+        <div class="container">
+            <form>
+                <div class="formContainer">
+                    <h1>Projection Calculator for Nonprofits</h1>
+                    <h3>Revenue: Hosted Virtual Campaigns</h3>
+                    <div class="slidecontainer">
+                        <label
+                            ><span id="displayRangeOne">3</span> Virtual
+                            Campaigns per Year</label
+                        >
+                        <input
+                            type="range"
+                            min="1"
+                            max="6"
+                            value="3"
+                            class="slider"
+                            id="myRangeOne"
+                        />
+                    </div>
+
+                    <div class="slidecontainer">
+                        <label
+                            ><span id="displayRangeTwo"></span>% of Participating
+                            Shoppers
+                        </label>
+                        <input
+                            type="range"
+                            min="0"
+                            max="100"
+                            value="50"
+                            step="5"
+                            class="slider"
+                            id="myRangeTwo"
+                        />
+                    </div>
+
+                    <div class="formItem">
+                        <label
+                            >Avg. Shoppers Spend per Virtual Campaign After
+                            Discounts</label
+                        >
+                        <input
+                            id="aveShopper"
+                            class="regInput"
+                            type="number"
+                            value="50"
+                        />
+                    </div>
                 </div>
+            </form>
 
-                <div class="slidecontainer">
-                    <label><span id="displayRangeTwo"></span> of Participating Shoppers </label>
-                    <input type="range" min="1" max="100" value="50" class="slider" id="myRangeTwo">
-                </div>
-
-                <div  class="formItem">
-                    <label>Avg. Shoppers Spend per Virtual Campaign After Discounts</label>
-                    <input id="aveShopper" class="regInput"type="number" value="50">
+            <div class="results">
+                <div class="formItem">
+                    <h3>
+                        Total Money Spent by Shoppers After Discounts: <br />
+                        <span style="color: #81cf44;">$</span>
+                        <span id="result"></span>
+                    </h3>
                 </div>
             </div>
-        </form>
 
-        <div class="results">
-            <div class="formItem">
-                <h2>Total Money Spent by Shoppers After Discounts: <br>
-                    <span style="color:#81CF44">$</span>
-                    <span id="result"></span>
-                </h2>
-            </div>
+            <!-- Virtual Campaign Revenu Projection -->
+            <form>
+                <div class="formContainer">
+                    <h3>Virtual Campaign Revenue Received</h3>
+                   
+                        <table>
+                            <tr>
+                                <td>6%</td>
+                                <td>Guaranteed to Nonprofit Campaign Host</td>
+                                <td>
+                                    <div class="formItem">
+                                        <h4>
+                                            <span style="color: #81cf44;"
+                                                >$</span
+                                            >
+                                            <span id="resultSplit1"></span>
+                                        </h4>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2.00%</td>
+                                <td>+ If Favorite Nonprofit of Shopper</td>
+                                <td>
+                                    <div class="formItem">
+                                        <h4>
+                                            <span style="color: #81cf44;"
+                                                >$</span
+                                            >
+                                            <span id="resultSplit2"></span>
+                                        </h4>
+                                    </div>
+                                </td>
+                                <td>
+                                     <label>
+                                            Assumed <span id="displayRangeR2C1">50%</span>
+                                             of participating Shoppers selected your Nonprofit as their Favorite Nonprofit
+                                    </label>
+                                    <input
+                                        type="range"
+                                        min="0"
+                                        max="100"
+                                        value="50"
+                                        step="5"
+                                        class="slider"
+                                        id="myRangeR2C1"
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2.00%</td>
+                                <td>+ If Favorite Nonprofit of Business</td>
+                                <td>
+                                    <div class="formItem">
+                                        <h4>
+                                            <span style="color: #81cf44;"
+                                                >$</span
+                                            >
+                                            <span id="resultSplit3"></span>
+                                        </h4>
+                                    </div>
+                                </td>
+                                <td>
+                                    <label>
+                                        Assumed <span id="displayRangeR3C1">95%</span>
+                                        of participating Businesses selected your Nonprofit as their Favorite Nonprofit
+                                    </label>
+                                    <input
+                                    type="range"
+                                    min="0"
+                                    max="100"
+                                    value="95"
+                                    step="5"
+                                    class="slider"
+                                    id="myRangeR3C1"
+                                /></td>
+                            </tr>
+                            <tr>
+                                <td>0.50%</td>
+                                <td>
+                                    + If Shopper referral was assigned to
+                                    Nonprofit
+                                </td>
+                                <td>
+                                    <div class="formItem">
+                                        <h4>
+                                            <span style="color: #81cf44;"
+                                                >$</span
+                                            >
+                                            <span id="resultSplit4"></span>
+                                        </h4>
+                                    </div>
+                                </td>
+                                <td>
+                                    <label>
+                                        Assumed <span id="displayRangeR4C1">70%</span>
+                                        of the <span id="displayRangeR4C2">90%</span>
+                                        of participating Shoppers selected your Nonprofit as the referral 
+                                    </label>
+                                <input
+                                    type="range"
+                                    min="0"
+                                    max="100"
+                                    value="95"
+                                    step="5"
+                                    class="slider"
+                                    id="myRangeR4I1"
+                                /></td>
+                                <td><input
+                                    type="range"
+                                    min="0"
+                                    max="100"
+                                    value="95"
+                                    step="5"
+                                    class="slider"
+                                    id="myRangeR4I2"
+                                /></td>
+                            </tr>
+                            <tr>
+                                <td>0.50%</td>
+                                <td>
+                                    + If Business referral was assigned to
+                                    Nonprofit
+                                </td>
+                                <td>
+                                    <div class="formItem">
+                                        <h4>
+                                            <span style="color: #81cf44;"
+                                                >$</span
+                                            >
+                                            <span id="resultSplit5"></span>
+                                        </h4>
+                                    </div>
+                                </td>
+                                <td>
+                                    <label>
+                                        Assumed <span id="displayRangeR5C1">70%</span>
+                                        of the <span id="displayRangeR5C2">95%</span>
+                                        of participating Businesses selected your Nonprofit as the referral 
+                                    </label>    
+                                <input
+                                    type="range"
+                                    min="0"
+                                    max="100"
+                                    value="70"
+                                    step="5"
+                                    class="slider"
+                                    id="myRangeR5C1"
+                                /></td>
+                                <td><input
+                                    type="range"
+                                    min="0"
+                                    max="100"
+                                    value="95"
+                                    step="5"
+                                    class="slider"
+                                    id="myRangeR5C2"
+                                /></td>
+                            </tr>
+                        </table>
+
+                        <div class="results">
+                            <div class="formItem">
+                                <h3>
+                                    Possible Revenue Received per Year from Campaigns: <br />
+                                    <span style="color: #81cf44;">$</span>
+                                    <span id="resultRevenue"></span>
+                                </h3>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
         </div>
-    </div>
-</body>
+    </body>
 </html>
 
 <script>
-// on change both sliders update state and print current val also update total 
-var sliderOne = document.getElementById("myRangeOne");
-var outputOne = document.getElementById("displayRangeOne");
-var sliderTwo = document.getElementById("myRangeTwo");
-var outputTwo = document.getElementById("displayRangeTwo");
+    // on change both sliders update state and print current val also update total
+    var sliderOne = document.getElementById("myRangeOne");
+    var outputOne = document.getElementById("displayRangeOne");
+    var sliderTwo = document.getElementById("myRangeTwo");
+    var outputTwo = document.getElementById("displayRangeTwo");
 
+    outputOne.innerHTML = sliderOne.value;
+    outputTwo.innerHTML = sliderTwo.value;
 
-outputOne.innerHTML = sliderOne.value;
-outputTwo.innerHTML = sliderTwo.value;
+    sliderOne.oninput = function () {
+        outputOne.innerHTML = this.value;
+        calculateAfterDiscounts();
+    };
 
-sliderOne.oninput = function() {
-    outputOne.innerHTML = this.value;
-    calculate();
-}
+    sliderTwo.oninput = function () {
+        outputTwo.innerHTML = this.value;
+        calculateAfterDiscounts();
+    };
 
-sliderTwo.oninput = function() {
-    outputTwo.innerHTML = this.value;
-    calculate();   
-}
+    // updateTotal on change
+    var outputThree = document.getElementById("result");
+    var aveShopperSpend = document.getElementById("aveShopper");
 
+    aveShopperSpend.oninput = function () {
+        calculateAfterDiscounts();
+    };
 
-// updateTotal on change
-var outputThree = document.getElementById("result");
-var aveShopperSpend = document.getElementById("aveShopper");
+    function calculateAfterDiscounts() {
+        var numVirutalCampaignsYr = Number(
+            document.getElementById("displayRangeOne").innerText
+        );
+        var numShoppersPerCampaign = Number(
+            document.getElementById("displayRangeTwo").innerText
+        );
+        var aveShopper = aveShopperSpend.value;
 
-aveShopperSpend.oninput = function() {
-     calculate();
+        var total = numVirutalCampaignsYr * numShoppersPerCampaign * aveShopper;
+
+        outputThree.innerText = total;
     }
 
-function calculate(){
-    var numVirutalCampaignsYr = Number(document.getElementById("displayRangeOne").innerText);
-    var numShoppersPerCampaign = Number(document.getElementById("displayRangeTwo").innerText);
-    var aveShopper = aveShopperSpend.value;
+    // Virtual Campaign Revenue Received ===================================
+    /* sorry for lazy code it was 2am*/
+    // get result div 
+    var resultSplit1 = document.getElementById("resultSplit1");
+    var resultSplit1 = document.getElementById("resultSplit2");
+    var resultSplit1 = document.getElementById("resultSplit3");
+    var resultSplit1 = document.getElementById("resultSplit4");
+    var resultSplit1 = document.getElementById("resultSplit5");
+    
+    // get range val
+    var sliderR2C1 = document.getElementById("myRangeR2C1");
+    var sliderR3C1 = document.getElementById("myRangeR3C1");
+    var sliderR4C1 = document.getElementById("myRangeR4C1");
+    var sliderR4C2 = document.getElementById("myRangeR4C2");
+    var sliderR5C1 = document.getElementById("myRangeR5C1");
+    var sliderR5C2 = document.getElementById("myRangeR5C2");
 
-    var total = ( numVirutalCampaignsYr * numShoppersPerCampaign * aveShopper );
-   
-    outputThree.innerText = total;
+    // get display div 
+    var outputR2C1 = document.getElementById("displayRangeR2C1");
+    var outputR3C1 = document.getElementById("displayRangeR3C1");
+    var outputR4C1 = document.getElementById("displayRangeR4C1");
+    var outputR4C2 = document.getElementById("displayRangeR4C2");
+    var outputR5C1 = document.getElementById("displayRangeR5C1");
+    var outputR5C2 = document.getElementById("displayRangeR5C2");
+
+    // on change sliders update Revenue
+    sliderR2C1.oninput = function() { outputR2C1.innerHTML = this.value; calculateRevenue();}
+    sliderR3C1.oninput = function() { outputR3C1.innerHTML = this.value; calculateRevenue();}
+    sliderR4C1.oninput = function() { outputR4C1.innerHTML = this.value; calculateRevenue();}
+    sliderR4C2.oninput = function() { outputR4C2.innerHTML = this.value; calculateRevenue();}
+    sliderR5C1.oninput = function() { outputR5C1.innerHTML = this.value; calculateRevenue();}
+    sliderR5C2.oninput = function() { outputR5C2.innerHTML = this.value; calculateRevenue();}
+
+    function calculateRevenue() {
+        var valR2C1 = Number(document.getElementById("displayRangeR2C1").innerText);       
+        var valR3C1 = Number(document.getElementById("displayRangeR3C1").innerText);
+        var valR4C1 = Number(document.getElementById("displayRangeR4C1").innerText);
+        var valR4C2 = Number(document.getElementById("displayRangeR4C2").innerText);
+        var valR5C1 = Number(document.getElementById("displayRangeR5C1").innerText);
+        var valR5C2 = Number(document.getElementById("displayRangeR5C2").innerText);
+        
+
+
 }
-
 </script>

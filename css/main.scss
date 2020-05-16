@@ -1,5 +1,5 @@
 .container{
-
+    align-items: center;
 }
 
 .inputs  {
@@ -19,7 +19,7 @@
   .slider {
     -webkit-appearance: none;  
     appearance: none;
-    width: 100%; 
+    width: 200px; 
     height: 25px;
     background: #d3d3d3;
     outline: none; 
@@ -88,4 +88,20 @@ input::-webkit-inner-spin-button {
     display: flex;
     justify-content: center;
 }
+
+table{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    
+}
+
+table,td {
+    border: 1px solid black;
+  }
+
+td > input {
+   background-color: red;
+}
+
 

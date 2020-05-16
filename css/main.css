@@ -1,3 +1,9 @@
+.container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .slidecontainer {
   width: 300px;
 }
@@ -7,7 +13,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
-  width: 100%;
+  width: 200px;
   height: 25px;
   background: #d3d3d3;
   outline: none;
@@ -86,5 +92,24 @@ input::-webkit-inner-spin-button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+table, td {
+  border: 1px solid black;
+}
+
+td > input {
+  background-color: red;
 }
 /*# sourceMappingURL=main.css.map */
