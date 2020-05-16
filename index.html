@@ -341,19 +341,19 @@
         var valR5C2 = Number(document.getElementById("displayRangeR5C2").innerText);
         
         // calculate 6% Guaranteed to Nonprofit Campaign Host 
-        resultSplit1.innerText = (0.06) * (Number(outputThree.innerText));
+        resultSplit1.innerText = Math.round((0.06) * (Number(outputThree.innerText)));
 
-        // calcualte 2% If Favorit Nonprofit of Shopper 
-        resultSplit2.innerText = (0.02) * (Number(outputThree.innerText)) * (Number(valR2C1)/100);
+        // calcualte 2% If FavoriMath.round(t Nonprofit of Shopper 
+        resultSplit2.innerText = Math.round((0.02) * (Number(outputThree.innerText)) * (Number(valR2C1)/100));
 
         // calculate 2% if Favorite Nonprofit of Business 
-        resultSplit3.innerText = (0.02) * (Number(outputThree.innerText)) * (Number(valR3C1)/100);
+        resultSplit3.innerText = Math.round((0.02) * (Number(outputThree.innerText)) * (Number(valR3C1)/100));
 
         // calculate 0.05% If shopper referral was assigned to Nonprofit 
-        resultSplit4.innerText = (0.005) * (Number(outputThree.innerText)) * (Number(valR4C1)/100) * (Number(valR4C2)/100);
+        resultSplit4.innerText = Math.round((0.005) * (Number(outputThree.innerText)) * (Number(valR4C1)/100) * (Number(valR4C2)/100));
         
         // calculate 0.05% if Business referral was assigned to Nonprofit 
-        resultSplit5.innerText = (0.005) * (Number(outputThree.innerText)) * (Number(valR5C1)/100) * (Number(valR5C2)/100);
+        resultSplit5.innerText = Math.round((0.005) * (Number(outputThree.innerText)) * (Number(valR5C1)/100) * (Number(valR5C2)/100));
 
         // calculate Possible Revenue Received per Year from Campaigns
         document.getElementById("resultRevenue").innerText = 
