@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body onload="test()">
+    <div class="container">
+        
+        <form>
+            <div class="formContainer">
+                <h1>PieShares Calculator</h1>
+                <div class="slidecontainer">
+                    <label><span id="displayRangeOne"></span> Virtual Campaigns per Year</label>
+                    <input type="range" min="1" max="6" value="3" class="slider" id="myRangeOne">
+                </div>
+
+                <div class="slidecontainer">
+                    <label><span id="displayRangeTwo"></span> of Participating Shoppers </label>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRangeTwo">
+                </div>
+
+                <div  class="formItem">
+                    <label>Avg. Shoppers Spend per Virtual Campaign After Discounts</label>
+                    <input id="aveShopper" class="regInput"type="number" value="50">
+                </div>
+            </div>
+        </form>
+
+        <div class="results">
+            <div class="formItem">
+                <h2>Total Money Spent by Shoppers After Discounts: <br>
+                    <span style="color:#81CF44">$</span>
+                    <span id="result"></span>
+                </h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+// on change both sliders update state and print current val also update total 
+var sliderOne = document.getElementById("myRangeOne");
+var outputOne = document.getElementById("displayRangeOne");
+var sliderTwo = document.getElementById("myRangeTwo");
+var outputTwo = document.getElementById("displayRangeTwo");
+
+
+outputOne.innerHTML = sliderOne.value;
+outputTwo.innerHTML = sliderTwo.value;
+
+sliderOne.oninput = function() {
+    outputOne.innerHTML = this.value;
+    calculate();
+}
+
+sliderTwo.oninput = function() {
+    outputTwo.innerHTML = this.value;
+    calculate();   
+}
+
+
+// updateTotal on change
+var outputThree = document.getElementById("result");
+var aveShopperSpend = document.getElementById("aveShopper");
+
+aveShopperSpend.oninput = function() {
+     calculate();
+    }
+
+function calculate(){
+    var numVirutalCampaignsYr = Number(document.getElementById("displayRangeOne").innerText);
+    var numShoppersPerCampaign = Number(document.getElementById("displayRangeTwo").innerText);
+    var aveShopper = aveShopperSpend.value;
+
+    var total = ( numVirutalCampaignsYr * numShoppersPerCampaign * aveShopper );
+   
+    outputThree.innerText = total;
+}
+
+</script>
