@@ -28,19 +28,15 @@
                         />
                     </div>
 
-                    <div class="slidecontainer">
+                    <div class="formItem">
                         <label
-                            ><span id="displayRangeTwo"></span>% of Participating
-                            Shoppers
+                            > Number of Participating Shoppers (Members and Supporters) per Virtual Campaign
                         </label>
                         <input
-                            type="range"
-                            min="0"
-                            max="100"
+                            id="numShopper"
+                            class="regInput"
+                            type="number"
                             value="100"
-                            step="5"
-                            class="slider"
-                            id="myRangeTwo"
                         />
                     </div>
 
@@ -259,19 +255,16 @@
     // on change both sliders update state and print current val also update total
     var sliderOne = document.getElementById("myRangeOne");
     var outputOne = document.getElementById("displayRangeOne");
-    var sliderTwo = document.getElementById("myRangeTwo");
-    var outputTwo = document.getElementById("displayRangeTwo");
+    var numShopper = document.getElementById("numShopper");
 
     outputOne.innerHTML = sliderOne.value;
-    outputTwo.innerHTML = sliderTwo.value;
 
     sliderOne.oninput = function () {
         outputOne.innerHTML = this.value;
         calculateAfterDiscounts();
     };
 
-    sliderTwo.oninput = function () {
-        outputTwo.innerHTML = this.value;
+    numShopper.oninput = function () {
         calculateAfterDiscounts();
     };
 
@@ -288,13 +281,13 @@
             document.getElementById("displayRangeOne").innerText
         );
         var numShoppersPerCampaign = Number(
-            document.getElementById("displayRangeTwo").innerText
+            document.getElementById("numShopper").value
         );
         var aveShopper = aveShopperSpend.value;
 
         var total = numVirutalCampaignsYr * numShoppersPerCampaign * aveShopper;
 
-        outputThree.innerText = total;
+        outputThree.innerText = numberWithCommas( total );
         calculateRevenue();
     }
 
@@ -341,19 +334,19 @@
         var valR5C2 = Number(document.getElementById("displayRangeR5C2").innerText);
         
         // calculate 6% Guaranteed to Nonprofit Campaign Host 
-        resultSplit1.innerText = Math.round((0.06) * (Number(outputThree.innerText)));
+        resultSplit1.innerText = numberWithCommas( Math.round((0.06) * (Number(outputThree.innerText))) );
 
         // calcualte 2% If FavoriMath.round(t Nonprofit of Shopper 
-        resultSplit2.innerText = Math.round((0.02) * (Number(outputThree.innerText)) * (Number(valR2C1)/100));
+        resultSplit2.innerText = numberWithCommas( Math.round((0.02) * (Number(outputThree.innerText)) * (Number(valR2C1)/100)) );
 
         // calculate 2% if Favorite Nonprofit of Business 
-        resultSplit3.innerText = Math.round((0.02) * (Number(outputThree.innerText)) * (Number(valR3C1)/100));
+        resultSplit3.innerText = numberWithCommas( Math.round((0.02) * (Number(outputThree.innerText)) * (Number(valR3C1)/100)) );
 
         // calculate 0.05% If shopper referral was assigned to Nonprofit 
-        resultSplit4.innerText = Math.round((0.005) * (Number(outputThree.innerText)) * (Number(valR4C1)/100) * (Number(valR4C2)/100));
+        resultSplit4.innerText = numberWithCommas( Math.round((0.005) * (Number(outputThree.innerText)) * (Number(valR4C1)/100) * (Number(valR4C2)/100)) );
         
         // calculate 0.05% if Business referral was assigned to Nonprofit 
-        resultSplit5.innerText = Math.round((0.005) * (Number(outputThree.innerText)) * (Number(valR5C1)/100) * (Number(valR5C2)/100));
+        resultSplit5.innerText = numberWithCommas( Math.round((0.005) * (Number(outputThree.innerText)) * (Number(valR5C1)/100) * (Number(valR5C2)/100)) );
 
         // calculate Possible Revenue Received per Year from Campaigns
         document.getElementById("resultRevenue").innerText = 
@@ -362,6 +355,12 @@
             (Number(resultSplit3.innerText)) +
             (Number(resultSplit4.innerText)) +
             (Number(resultSplit5.innerText)) ;
+}
+
+// add comma to number 
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
     
    
