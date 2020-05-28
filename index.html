@@ -13,9 +13,10 @@
                 <div class="formContainer">
                     <h1>Projection Calculator for Nonprofits</h1>
                     <h3>Revenue: Hosted Virtual Campaigns</h3>
+                    
                     <div class="slidecontainer">
                         <label
-                            ><span id="displayRangeOne">3</span> Virtual
+                            ><span id="displayRangeOne">4</span> Virtual
                             Campaigns per Year</label
                         >
                         <input
@@ -28,33 +29,33 @@
                         />
                     </div>
 
-                    <div class="slidecontainer">
-                        <label
-                            ><span id="displayRangeTwo"></span>% of Participating
-                            Shoppers
-                        </label>
-                        <input
-                            type="range"
-                            min="0"
-                            max="100"
-                            value="100"
-                            step="5"
-                            class="slider"
-                            id="myRangeTwo"
-                        />
-                    </div>
-
                     <div class="formItem">
                         <label
-                            >Avg. Shoppers Spend per Virtual Campaign After
-                            Discounts</label
-                        >
+                         > (Members and Supporters) per Virtual Campaign
+                        </label>
                         <input
-                            id="aveShopper"
+                            id="myRangeTwo"
                             class="regInput"
                             type="number"
                             value="100"
                         />
+
+
+                    </div>
+
+                    <div class="slidecontainer">
+                        <label
+                        ><span id="displayRangeThree">100</span>% Avg. Shoppers Spend per Virtual Campaign After
+                        Discounts</label
+                        >
+                    <input
+                        id="myRangeThree"
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="100"
+                        class="slider"
+                    />
                     </div>
                 </div>
             </form>
@@ -249,9 +250,268 @@
                         </div>
 
                     </div>
+                
+            </form>
+
+<!-- =======Revenue: Non-Hosted Virtual Campaigns Projection================================ -->
+            <form>
+                <div class="formContainer">
+                    <h3>Revenue: Non-Hosted Virtual Campaigns</h3>
+                   
+                        <table>
+                            <tr>
+                                <td>2.00%</td>
+                                <td>+ If Favorite Nonprofit of Shopper</td>
+                                <td>
+                                    <div class="formItem">
+                                        <h4>
+                                            <span style="color: #81cf44;"
+                                                >$</span
+                                            >
+                                            <span id="resultSplitNone1"></span>
+                                        </h4>
+                                    </div>
+                                </td>
+                                <td>
+                                     <label>
+                                            Assumed <span id="displayRangeNoneR2C1">10</span>%
+                                            of your Shoppers spending in other Virtual Campaigns.
+                                    </label>
+                                    <input
+                                        type="range"
+                                        min="0"
+                                        max="100"
+                                        value="10"
+                                        step="5"
+                                        class="slider"
+                                        id="myRangeNoneR2C1"
+                                    />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>2.00%</td>
+                                <td>+ If Favorite Nonprofit of Business</td>
+                                <td>
+                                    <div class="formItem">
+                                        <h4>
+                                            <span style="color: #81cf44;"
+                                                >$</span
+                                            >
+                                            <span id="resultSplitNone2"></span>
+                                        </h4>
+                                    </div>
+                                </td>
+                                <td>
+                                     <label>
+                                            Assumed <span id="displayRangeNoneR3C1">5</span>%
+                                            of your Businesses selling in other Virtual Campaigns. 
+                                    </label>
+                                    <input
+                                        type="range"
+                                        min="0"
+                                        max="100"
+                                        value="5"
+                                        step="5"
+                                        class="slider"
+                                        id="myRangeNoneR3C1"
+                                    />
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td>0.50%</td>
+                                <td>+ If Shopper referral was assigned to Nonprofit</td>
+                                <td>
+                                    <div class="formItem">
+                                        <h4>
+                                            <span style="color: #81cf44;"
+                                                >$</span
+                                            >
+                                            <span id="resultSplitNone3"></span>
+                                        </h4>
+                                    </div>
+                                </td>
+                                <td>
+                                    <label>
+                                        Assumed <span id="displayRangeNoneR4C1">70</span>%
+                                        of 
+                                    </label>
+                                    <input
+                                    type="range"
+                                    min="0"
+                                    max="100"
+                                    value="70"
+                                    step="5"
+                                    class="slider"
+                                    id="myRangeNoneR4C1"
+                                /></td>
+                                <td>
+                                    <label>
+                                        the<span id="displayRangeNoneR4C2">10</span>%
+                                         of participating Shoppers selected your Nonprofit as the referral  
+                                    </label>
+                                    <input
+                                        type="range"
+                                        min="0"
+                                        max="100"
+                                        value="10"
+                                        step="5"
+                                        class="slider"
+                                        id="myRangeNoneR4C2"
+                                    /></td>
+                            </tr>
+                            <tr>
+                                <td>0.50%</td>
+                                <td>
+                                    + If Business referral was assigned to Nonprofit
+                                </td>
+                                <td>
+                                    <div class="formItem">
+                                        <h4>
+                                            <span style="color: #81cf44;"
+                                                >$</span
+                                            >
+                                            <span id="resultSplitNone4"></span>
+                                        </h4>
+                                    </div>
+                                </td>
+                                <td>
+                                    <label>
+                                        Assumed <span id="displayRangeNoneR5C1">70</span>%
+                                        of the 
+                                    </label>
+
+                                <input
+                                    type="range"
+                                    min="0"
+                                    max="100"
+                                    value="70"
+                                    step="5"
+                                    class="slider"
+                                    id="myRangeNoneR5C1"
+                                /></td>
+                                <td>
+                                <label>
+                                    <span id="displayRangeNoneR5C2">5</span>%
+                                    of participating Businesses selected your Nonprofit as the referral
+                                </label>
+                                <input
+                                    type="range"
+                                    min="0"
+                                    max="100"
+                                    value="5"
+                                    step="5"
+                                    class="slider"
+                                    id="myRangeNoneR5C2"
+                                /></td>
+                            </tr>
+                            <tr>
+                                <td>0.50%</td>
+                                <td>
+                                    + If Nonprofit referral was assigned to Nonprofit
+                                </td>
+                                <td>
+                                    <div class="formItem">
+                                        <h4>
+                                            <span style="color: #81cf44;"
+                                                >$</span
+                                            >
+                                            <span id="resultSplitNone5"></span>
+                                        </h4>
+                                    </div>
+                                </td>
+                                <td> 
+                                    <label>
+                                        Assumed <span id="displayRangeNoneR6C1">0</span>%
+                                        of the Nonprofits hosting Virtual Campaigns selected your Nonprofit as the referral
+                                    </label>   
+                                <input
+                                    type="range"
+                                    min="0"
+                                    max="100"
+                                    value="0"
+                                    step="5"
+                                    class="slider"
+                                    id="myRangeNoneR6C1"
+                                />
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div class="results">
+                            <div class="formItem">
+                                <h3>
+                                    Possible Revenue Received per Year from Campaigns: 11% <br />
+                                    <span style="color: #81cf44;">$</span>
+                                    <span id="resultRevenueNone"></span>
+                                </h3>
+                            </div>
+                        </div>
+
+                    </div>
+            </form>
+
+
+            <form>
+                <div class="formContainer">
+                    <table>  
+                    <tr>
+                        <td>
+                            <h3>Revenue Sources</h3>    
+                        </td>
+                        <td>
+                            <h3>Revenue Received</h3>
+                        </td>
+                        <td>
+                            <h3>Notes</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>Hosted Virtual Campaigns</h3>    
+                        </td>
+                        <td>
+                            <div class="formItem">
+                                <span style="color: #81cf44;">$</span>
+                                <span id="resultRevenueTotal"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <h3>Revenue from Virtual Campaigns your Nonprofit hosts</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>Non-Hosted Virtual Campaigns</h3>    
+                        </td>
+                        <td>
+                            <div class="formItem">
+                                <span style="color: #81cf44;">$</span>
+                                <span id="resultRevenueNoneTotal"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <h3>Revenue from Virtual Campaigns your Nonprofit does NOT host
+                            </h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>Possible Total Revenue Received per Year</h3>    
+                        </td>
+                        <td>
+                            <span style="color: #81cf44;">$</span>
+                            <span id="total"></span>
+                        </td>
+                       
+                    </tr>
+                    </table>
                 </div>
             </form>
+
         </div>
+
     </body>
 </html>
 
@@ -259,46 +519,52 @@
     // on change both sliders update state and print current val also update total
     var sliderOne = document.getElementById("myRangeOne");
     var outputOne = document.getElementById("displayRangeOne");
-    var sliderTwo = document.getElementById("myRangeTwo");
-    var outputTwo = document.getElementById("displayRangeTwo");
 
-    outputOne.innerHTML = sliderOne.value;
-    outputTwo.innerHTML = sliderTwo.value;
+    var sliderTwo = document.getElementById("myRangeTwo");
+
+    var sliderThree = document.getElementById("myRangeThree");
+    var outputThree = document.getElementById("displayRangeThree");
+
+    var numShopper;
 
     sliderOne.oninput = function () {
         outputOne.innerHTML = this.value;
         calculateAfterDiscounts();
     };
-
     sliderTwo.oninput = function () {
-        outputTwo.innerHTML = this.value;
+        calculateAfterDiscounts();
+    };
+    sliderThree.oninput = function () {
+        outputThree.innerHTML = this.value;
         calculateAfterDiscounts();
     };
 
     // updateTotal on change
-    var outputThree = document.getElementById("result");
-    var aveShopperSpend = document.getElementById("aveShopper");
+    var outputFour = document.getElementById("result");
+    var outputFourVal ;
 
-    aveShopperSpend.oninput = function () {
-        calculateAfterDiscounts();
-    };
 
     function calculateAfterDiscounts() {
+
         var numVirutalCampaignsYr = Number(
             document.getElementById("displayRangeOne").innerText
         );
         var numShoppersPerCampaign = Number(
-            document.getElementById("displayRangeTwo").innerText
+            document.getElementById("myRangeTwo").value
         );
-        var aveShopper = aveShopperSpend.value;
+        var aveShopperSpend = Number( 
+            document.getElementById("displayRangeThree").innerHTML
+        );
+        
 
-        var total = numVirutalCampaignsYr * numShoppersPerCampaign * aveShopper;
+        var total = numVirutalCampaignsYr * numShoppersPerCampaign * aveShopperSpend;
 
-        outputThree.innerText = total;
+        outputFourVal = total;
+        outputFour.innerText =   numberWithCommas( total ) ;
         calculateRevenue();
     }
 
-    // Virtual Campaign Revenue Received ===================================
+    // Hosted Virtual Campaigns ===================================
     /* sorry for lazy code it was 2am*/
     // get result div 
     var resultSplit1 = document.getElementById("resultSplit1");
@@ -331,6 +597,8 @@
     sliderR5C1.oninput = function() { outputR5C1.innerHTML = this.value; calculateRevenue();}
     sliderR5C2.oninput = function() { outputR5C2.innerHTML = this.value; calculateRevenue();}
 
+    var sliderR2toR5Total;
+
     function calculateRevenue() {
         // get vals for calculations
         var valR2C1 = Number(document.getElementById("displayRangeR2C1").innerText);       
@@ -341,26 +609,129 @@
         var valR5C2 = Number(document.getElementById("displayRangeR5C2").innerText);
         
         // calculate 6% Guaranteed to Nonprofit Campaign Host 
-        resultSplit1.innerText = Math.round((0.06) * (Number(outputThree.innerText)));
+        resultSplit1.innerText =  Math.round((0.06) * (Number(outputFourVal)));
+        console.log(resultSplit1.innerText);
 
         // calcualte 2% If FavoriMath.round(t Nonprofit of Shopper 
-        resultSplit2.innerText = Math.round((0.02) * (Number(outputThree.innerText)) * (Number(valR2C1)/100));
+        resultSplit2.innerText =  Math.ceil((0.02) * (Number(outputFourVal)) * (Number(valR2C1)/100)) ;
 
         // calculate 2% if Favorite Nonprofit of Business 
-        resultSplit3.innerText = Math.round((0.02) * (Number(outputThree.innerText)) * (Number(valR3C1)/100));
+        resultSplit3.innerText =  Math.ceil((0.02) * (Number(outputFourVal)) * (Number(valR3C1)/100)) ;
 
         // calculate 0.05% If shopper referral was assigned to Nonprofit 
-        resultSplit4.innerText = Math.round((0.005) * (Number(outputThree.innerText)) * (Number(valR4C1)/100) * (Number(valR4C2)/100));
+        resultSplit4.innerText =  Math.ceil((0.005) * (Number(outputFourVal)) * (Number(valR4C1)/100) * (Number(valR4C2)/100)) ;
         
         // calculate 0.05% if Business referral was assigned to Nonprofit 
-        resultSplit5.innerText = Math.round((0.005) * (Number(outputThree.innerText)) * (Number(valR5C1)/100) * (Number(valR5C2)/100));
+        resultSplit5.innerText =  Math.ceil((0.005) * (Number(outputFourVal)) * (Number(valR5C1)/100) * (Number(valR5C2)/100)) ;
 
+        // store total 
+        sliderR2toR5Total = (
+           Number(resultSplit1.innerText)
+         + Number(resultSplit2.innerText)
+         + Number(resultSplit3.innerText) 
+         + Number(resultSplit4.innerText)
+         + Number(resultSplit5.innerText));
+
+         resultSplit1.innerText = numberWithCommas (resultSplit1.innerText);
+         resultSplit2.innerText = numberWithCommas (resultSplit2.innerText);
+         resultSplit3.innerText = numberWithCommas (resultSplit3.innerText);
+         resultSplit4.innerText = numberWithCommas (resultSplit4.innerText);
+         resultSplit5.innerText = numberWithCommas (resultSplit5.innerText);
+
+         
         // calculate Possible Revenue Received per Year from Campaigns
-        document.getElementById("resultRevenue").innerText = 
-            (Number(resultSplit1.innerText)) +
-            (Number(resultSplit2.innerText)) +
-            (Number(resultSplit3.innerText)) +
-            (Number(resultSplit4.innerText)) +
-            (Number(resultSplit5.innerText)) ;
-}
+        document.getElementById("resultRevenue").innerText = numberWithCommas(sliderR2toR5Total);
+
+        calculateRevenueNone();
+    }
+   // None-Hosted Vals 
+    // get result div 
+    var resultSplitNone1 = document.getElementById("resultSplitNone1");
+    var resultSplitNone2 = document.getElementById("resultSplitNone2");
+    var resultSplitNone3 = document.getElementById("resultSplitNone3");
+    var resultSplitNone4 = document.getElementById("resultSplitNone4");
+    var resultSplitNone5 = document.getElementById("resultSplitNone5");
+    
+    // get range val                    
+    var sliderNoneR2C1 = document.getElementById("myRangeNoneR2C1");
+    var sliderNoneR3C1 = document.getElementById("myRangeNoneR3C1");
+    var sliderNoneR4C1 = document.getElementById("myRangeNoneR4C1");
+    var sliderNoneR4C2 = document.getElementById("myRangeNoneR4C2");
+    var sliderNoneR5C1 = document.getElementById("myRangeNoneR5C1");
+    var sliderNoneR5C2 = document.getElementById("myRangeNoneR5C2");
+    var sliderNoneR6C1 = document.getElementById("myRangeNoneR6C1");
+
+    // get display div                            
+    var outputNoneR2C1 = document.getElementById("displayRangeNoneR2C1");
+    var outputNoneR3C1 = document.getElementById("displayRangeNoneR3C1");
+    var outputNoneR4C1 = document.getElementById("displayRangeNoneR4C1");
+    var outputNoneR4C2 = document.getElementById("displayRangeNoneR4C2");
+    var outputNoneR5C1 = document.getElementById("displayRangeNoneR5C1");
+    var outputNoneR5C2 = document.getElementById("displayRangeNoneR5C2");
+    var outputNoneR6C1 = document.getElementById("displayRangeNoneR6C1");
+
+
+    // on change sliders update Revenue
+     sliderNoneR2C1.oninput = function() { outputNoneR2C1.innerHTML = this.value; calculateRevenueNone();}
+     sliderNoneR3C1.oninput = function() { outputNoneR3C1.innerHTML = this.value; calculateRevenueNone();}
+     sliderNoneR4C1.oninput = function() { outputNoneR4C1.innerHTML = this.value; calculateRevenueNone();}
+     sliderNoneR4C2.oninput = function() { outputNoneR4C2.innerHTML = this.value; calculateRevenueNone();}
+     sliderNoneR5C1.oninput = function() { outputNoneR5C1.innerHTML = this.value; calculateRevenueNone();}
+     sliderNoneR5C2.oninput = function() { outputNoneR5C2.innerHTML = this.value; calculateRevenueNone();}
+     sliderNoneR6C1.oninput = function() { outputNoneR6C1.innerHTML = this.value; calculateRevenueNone();}
+    
+    var sliderNoneR2toR5Total;
+    // Revenue: Non-Hosted Virtual Campaigns ===================================
+    function calculateRevenueNone(){
+        // get vals for calculations
+        var valNoneR2C1 = Number(document.getElementById("displayRangeNoneR2C1").innerText);       
+        var valNoneR3C1 = Number(document.getElementById("displayRangeNoneR3C1").innerText);
+        var valNoneR4C1 = Number(document.getElementById("displayRangeNoneR4C1").innerText);
+        var valNoneR4C2 = Number(document.getElementById("displayRangeNoneR4C2").innerText);
+        var valNoneR5C1 = Number(document.getElementById("displayRangeNoneR5C1").innerText);
+        var valNoneR5C2 = Number(document.getElementById("displayRangeNoneR5C2").innerText);
+        var valNoneR6C1 = Number(document.getElementById("displayRangeNoneR6C1").innerText);
+
+        resultSplitNone1.innerText = Math.ceil( (0.02) * Number(outputFourVal)  *  (valNoneR2C1/100)); 
+        resultSplitNone2.innerText = Math.ceil( (0.02) * Number(outputFourVal)  *  (valNoneR3C1/100)); 
+        resultSplitNone3.innerText = Math.ceil( (0.005) * Number(outputFourVal) *  (valNoneR4C1/100) * (valNoneR4C2/100)); 
+        resultSplitNone4.innerText = Math.ceil( (0.005) * Number(outputFourVal) *  (valNoneR5C1/100) * (valNoneR5C2/100)); 
+        resultSplitNone5.innerText = Math.ceil( (0.005) * Number(outputFourVal) *  (valNoneR6C1/100)); 
+        
+         // store total 
+         sliderR2toR5NoneTotal = (
+           Number(resultSplitNone1.innerText)
+         + Number(resultSplitNone2.innerText)
+         + Number(resultSplitNone3.innerText) 
+         + Number(resultSplitNone4.innerText)
+         + Number(resultSplitNone5.innerText));
+
+         resultSplitNone1.innerText = numberWithCommas (resultSplitNone1.innerText);
+         resultSplitNone2.innerText = numberWithCommas (resultSplitNone2.innerText);
+         resultSplitNone3.innerText = numberWithCommas (resultSplitNone3.innerText);
+         resultSplitNone4.innerText = numberWithCommas (resultSplitNone4.innerText);
+         resultSplitNone5.innerText = numberWithCommas (resultSplitNone5.innerText);
+
+         
+        // calculate Possible Revenue Received per Year from Campaigns
+        document.getElementById("resultRevenueNone").innerText = numberWithCommas(sliderR2toR5NoneTotal);
+        
+        //Revenue: Total Annual Projection
+        document.getElementById("resultRevenueTotal").innerText = numberWithCommas(sliderR2toR5Total);
+        document.getElementById("resultRevenueNoneTotal").innerText = numberWithCommas(sliderR2toR5NoneTotal);
+        document.getElementById("total").innerText = numberWithCommas(sliderR2toR5Total+sliderR2toR5NoneTotal);
+        
+        
+
+    }
+
+    
+    
+    // add comma to number 
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");      
+    }
+    
+   
+
 </script>
