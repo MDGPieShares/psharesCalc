@@ -1,4 +1,17 @@
+.container{
+    display: flex;
+    flex-direction:column ;
+}
 
+
+.containerItem{
+    display: flex;
+    justify-content: space-around;
+}
+.resultTotal{
+    align-items: center;
+    font-size: xx-large;
+}
 button{
     margin-top: 10px;
     width: 200px;
@@ -13,10 +26,10 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.results{
-    display: flex;
-    justify-content: center;
+.tableOne >table{
+    width: 300px;
 }
+
 
 
 

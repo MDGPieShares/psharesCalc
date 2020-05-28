@@ -3429,6 +3429,8 @@ table span.badge {
 }
 
 .container {
+  
+  align-items: center;
   margin: 0 auto;
   max-width: 1280px;
   width: 90%;
@@ -7381,6 +7383,7 @@ input[type=range] + .thumb .value {
           transform: rotate(45deg);
 }
 
+/*
 input[type=range] + .thumb.active {
   border-radius: 50% 50% 50% 0;
 }
@@ -7391,6 +7394,7 @@ input[type=range] + .thumb.active .value {
   margin-top: 8px;
   font-size: 10px;
 }
+*/
 
 input[type=range] {
   -webkit-appearance: none;
@@ -7451,7 +7455,7 @@ input[type=range]::-moz-range-thumb {
   transition: box-shadow .3s;
   transition: box-shadow .3s, -webkit-box-shadow .3s;
   margin-top: -5px;
-}
+} 
 
 input[type=range]:-moz-focusring {
   outline: 1px solid #fff;

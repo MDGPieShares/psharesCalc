@@ -27,8 +27,10 @@
     <body onload="calculateAfterDiscounts()">
         <div class="container">
             <h2>Projection Calculator for Nonprofits</h2>
-            Revenue: Hosted Virtual Campaigns
 
+            <h5>Revenue: Hosted Virtual Campaigns</h5>
+
+            <div class="containerItem">
             <table class="highlight">
                 
                     <tr>
@@ -84,18 +86,25 @@
                         </tr>
             
                     </table>
-
+                </div>
+            
+            <div class="containerItem">
             <div class="results">
-                Total Money Spent by Shoppers After Discounts: <br />
-                <span style="color: #81cf44;">$</span>
-                <span id="result"></span>
+               <h5> Total Money Spent by Shoppers After Discounts:</h5> <br />
+                <div class= "resultTotal">
+
+                    <span style="color: #81cf44;">$</span>
+                    <span id="result"></span>
+                </div>
+                
+            </div>
             </div>
 
             <!-- Virtual Campaign Revenu Projection -->
-
-            Virtual Campaign Revenue Received
+            <div class="containerItem">
 
             <table class="highlight">
+                <caption>Virtual Campaign Revenue Received</caption>
                 <thead>
                     <tr>
                         <th>
@@ -120,6 +129,8 @@
                             <span style="color: #81cf44;">$</span>
                             <span id="resultSplit1"></span>
                         </td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td>2.00%</td>
@@ -144,6 +155,7 @@
                                 class="slider"
                                 id="myRangeR2C1"
                             />
+                            <td></td>
                         </td>
                     </tr>
                     <tr>
@@ -170,6 +182,7 @@
                                 id="myRangeR3C1"
                             />
                         </td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td>0.50%</td>
@@ -256,18 +269,26 @@
                     </tr>
                 </tbody>
             </table>
-
-            <div class="results">
-                Possible Revenue Received per Year from Campaigns: 11% <br />
-                <span style="color: #81cf44;">$</span>
-                <span id="resultRevenue"></span>
             </div>
+
+            <div class="containerItem">
+            <div class="results">
+               <h5> Possible Revenue Received per Year from Campaigns: 11% </h5> <br />
+                
+               <div class ="resultTotal">
+                <span style="color: #81cf44;">$</span>
+                    <span id="resultRevenue"></span>
+            </div>
+            </div>
+            </div>
+
 
             <!-- =======Revenue: Non-Hosted Virtual Campaigns Projection================================ -->
 
-            Revenue: Non-Hosted Virtual Campaigns
-
-            <table class="highlight">
+            <div class="containerItem">
+                
+                <table class="highlight">
+                    <caption>Revenue: Non-Hosted Virtual Campaigns</caption>
                 <thead>
                     <tr>
                         <th>
@@ -281,6 +302,9 @@
                         </th>
                         <th>
                             Notes
+                        </th>
+                        <th>
+
                         </th>
                     </tr>
                 </thead>
@@ -307,6 +331,9 @@
                             id="myRangeNoneR2C1"
                         />
                     </td>
+                    <td>
+
+                    </td>
                 </tr>
 
                 <tr>
@@ -332,6 +359,7 @@
                             id="myRangeNoneR3C1"
                         />
                     </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>0.50%</td>
@@ -442,15 +470,28 @@
                             id="myRangeNoneR6C1"
                         />
                     </td>
+                    <td></td>
+                  
+                        
+                    
+                </tr>
+                <tr>
+                    <td>
+                     Possible Revenue Received per Year from Non-Hosted Campaigns: 5.50% 
+                        </td>
+                        <td>
+
+                            <span style="color: #81cf44;">$</span>
+                            <span id="resultRevenueNone"></span>
+                        </td>
                 </tr>
             </table>
-
-            <div class="results">
-                Possible Revenue Received per Year from Campaigns: 11% <br />
-                <span style="color: #81cf44;">$</span>
-                <span id="resultRevenueNone"></span>
             </div>
 
+            
+            
+
+            <div class="containerItem">
             <table>
                 <thead>
                     <tr>
@@ -496,12 +537,16 @@
                             Possible Total Revenue Received per Year
                         </td>
                         <td>
+                            <div class ="resultTotal">
                             <span style="color: #81cf44;">$</span>
                             <span id="total"></span>
+                            </div>
                         </td>
                     </tr>
                 </tbody>
             </table>
+            </div>    
+            
         </div>
     </body>
 </html>

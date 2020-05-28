@@ -1,3 +1,28 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.containerItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.resultTotal {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: xx-large;
+}
+
 button {
   margin-top: 10px;
   width: 200px;
@@ -10,12 +35,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.results {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.tableOne > table {
+  width: 300px;
 }
 /*# sourceMappingURL=main.css.map */
