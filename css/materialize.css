@@ -1,8 +1,6 @@
-/*!
- * Materialize v1.0.0 (http://materializecss.com)
- * Copyright 2014-2017 Materialize
- * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
- */
+/* Import Font*/
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
 .materialize-red {
   background-color: #e51c23 !important;
 }
@@ -2593,7 +2591,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Nunito", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Nunito", sans-serif;
 }
 
 ul:not(.browser-default) {
@@ -2797,7 +2795,7 @@ video.responsive-video {
   color: rgba(255, 255, 255, 0.7);
   vertical-align: top;
   display: inline-block;
-  font-family: 'Material Icons';
+  font-family: 'Nunito';
   font-weight: normal;
   font-style: normal;
   font-size: 25px;
@@ -2998,7 +2996,7 @@ table.highlight > tbody > tr {
 }
 
 table.highlight > tbody > tr:hover {
-  background-color: rgba(242, 242, 242, 0.5);
+  background-color:#FFFFFF/*  rgba(242, 242, 242, 0.5) */;
 }
 
 table.centered thead tr th, table.centered tbody tr td {
@@ -3015,6 +3013,7 @@ td, th {
   text-align: left;
   vertical-align: middle;
   border-radius: 2px;
+  font-size: 1.2rem;
 }
 
 @media only screen and (max-width: 992px) {
@@ -3430,10 +3429,15 @@ table span.badge {
 
 .container {
   
-  align-items: center;
+  /* align-items: center; */
+  margin-top: 5em;
   margin: 0 auto;
   max-width: 1280px;
-  width: 90%;
+  width: 95%;
+
+  display: flex;
+  flex-wrap: row;
+  justify-content: center;
 }
 
 @media only screen and (min-width: 601px) {
@@ -4492,9 +4496,10 @@ a {
 
 html {
   line-height: 1.5;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family:'Nunito', sans-serif;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.87);
+  scroll-behavior: smooth;
 }
 
 @media only screen and (min-width: 0) {
@@ -6099,8 +6104,8 @@ button:focus {
 }
 
 label {
-  font-size: 0.8rem;
-  color: #9e9e9e;
+  font-size: 1.2rem!important;
+  color: #093145;
 }
 
 /* Text Inputs + Textarea
@@ -7408,19 +7413,19 @@ input[type=range]::-webkit-slider-runnable-track {
 
 input[type=range]::-webkit-slider-thumb {
   border: none;
-  height: 14px;
-  width: 14px;
+  height: 25px;
+  width:  25px;
   border-radius: 50%;
-  background: #26a69a;
+  background: #69CDE6;
   -webkit-transition: -webkit-box-shadow .3s;
   transition: -webkit-box-shadow .3s;
   transition: box-shadow .3s;
   transition: box-shadow .3s, -webkit-box-shadow .3s;
   -webkit-appearance: none;
-  background-color: #26a69a;
+  background-color: #69CDE6;
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
-  margin: -5px 0 0 0;
+  margin: -10px 0 0 0;
 }
 
 .keyboard-focused input[type=range]:focus:not(.active)::-webkit-slider-thumb {
@@ -7430,7 +7435,7 @@ input[type=range]::-webkit-slider-thumb {
 
 input[type=range] {
   /* fix for FF unable to apply focus style bug  */
-  border: 1px solid white;
+  /* border: 1px solid white; */
   /*required for proper track sizing in FF*/
 }
 
@@ -7446,8 +7451,8 @@ input[type=range]::-moz-focus-inner {
 
 input[type=range]::-moz-range-thumb {
   border: none;
-  height: 14px;
-  width: 14px;
+  height: 25px;
+  width:  25px;
   border-radius: 50%;
   background: #26a69a;
   -webkit-transition: -webkit-box-shadow .3s;
@@ -7470,7 +7475,7 @@ input[type=range]::-ms-track {
   height: 3px;
   background: transparent;
   border-color: transparent;
-  border-width: 6px 0;
+  border-width: 9px 0;
   /*remove default tick marks*/
   color: transparent;
 }
