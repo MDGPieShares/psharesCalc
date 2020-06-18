@@ -3432,12 +3432,12 @@ table span.badge {
   /* align-items: center; */
   margin-top: 5em;
   margin: 0 auto;
-  max-width: 1280px;
+ /*  max-width: 1280px; */
   width: 95%;
 
-  display: flex;
+ /*  display: flex;
   flex-wrap: row;
-  justify-content: center;
+  justify-content: center; */
 }
 
 @media only screen and (min-width: 601px) {
@@ -8277,12 +8277,12 @@ input[type=range]::-ms-thumb {
 
 .slider {
   position: relative;
-  height: 100px;
+  height: 10px;
   width: 100%;
 }
 
 .slider.fullscreen {
-  height: 100%;
+  height: 10%;
   width: 100%;
   position: absolute;
   top: 0;
