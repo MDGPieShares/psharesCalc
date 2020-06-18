@@ -11,11 +11,16 @@
           align-items: center;
 }
 
+.header #calc_Title {
+  color: #69cde6;
+  font-size: 25pt;
+}
+
 .resultTotal {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: xx-large;
+  font-size: x-large;
 }
 
 /*space between each tabels override*/
@@ -67,7 +72,7 @@ table > caption {
 
 .img_header {
   display: block;
-  margin-top: 1.5em;
+  margin-top: 5em;
   margin-left: auto;
   margin-right: auto;
 }
@@ -100,11 +105,17 @@ body {
   margin: 0;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow-y: hidden;
   height: 100vh;
 }
 
@@ -139,96 +150,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
+  max-height: 100%;
   margin-left: 2em;
   margin-top: -4em;
-}
-
-@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* Force table to not be like tables anymore */
-  .header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .resultTotal {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-size: xx-large;
-  }
-  /*space between each tabels override*/
-  table {
-    margin-top: 5em !important;
-    background-color: #f5f5f5;
-    border-radius: 0.5em;
-    /* cellspacing */
-    border-collapse: collapse !important;
-    border-spacing: 0 !important;
-  }
-  table:hover {
-    border-radius: 0.5em;
-  }
-  .tableOne {
-    max-width: 44em;
-  }
-  .tableTwo {
-    max-width: 70em;
-  }
-  .tableThree {
-    max-width: 70em;
-  }
-  .tableFour {
-    margin-top: -4.5em;
-    max-width: 44em;
-  }
-  .wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    overflow-y: hidden;
-    height: 100vh;
-  }
-  .sectionTwo {
-    padding: 0 1em;
-    color: #444;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
-    overflow: auto;
-    margin-left: 2em;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 100%;
-    width: 90%;
-    padding-bottom: 2em;
-  }
-  .sectionOne {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 100%;
-    margin-left: 2em;
-    margin-top: -4em;
-  }
 }
 /*# sourceMappingURL=main.css.map */
