@@ -13,14 +13,14 @@
 
 .header #calc_Title {
   color: #69cde6;
-  font-size: 25pt;
+  font-size: 2vw;
 }
 
 .resultTotal {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: x-large;
+  font-size: 4vw;
 }
 
 /*space between each tabels override*/
@@ -39,7 +39,7 @@ input::-webkit-inner-spin-button {
 }
 
 table > caption {
-  font-size: x-large;
+  font-size: 1.7vw;
   margin-bottom: 0.5em;
 }
 
@@ -68,20 +68,21 @@ table > caption {
 }
 
 .tableOne {
-  max-width: 100%;
+  max-width: 44vw;
+  max-height: 40vh;
 }
 
 .tableTwo {
-  max-width: 70em;
+  max-width: 70vw;
 }
 
 .tableThree {
-  max-width: 70em;
+  max-width: 70vw;
 }
 
 .tableFour {
-  padding-top: 1em;
-  max-width: 100%;
+  padding-top: 7em;
+  max-height: 40vh;
 }
 
 .resultTotal {
@@ -106,7 +107,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow-y: hidden;
   height: 100vh;
 }
 
