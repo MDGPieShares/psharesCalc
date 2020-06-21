@@ -127,7 +127,7 @@
                             Revenue
                         </th>
                         <th>
-                            Assumed
+                            Assumptions
                         </th>
                     </tr>
                 </thead>
@@ -274,7 +274,7 @@
                             Revenue Received
                         </th>
                         <th>
-                            Assumed
+                            Assumptions
                         </th>
                         <th>
 
@@ -430,10 +430,10 @@
                             Sources
                         </th>
                         <th>
-                            Received
+                            Percentage Earned
                         </th>
                         <th>
-                            Percentage Earned
+                            Received
                         </th>
                     </tr>
                 </thead>
@@ -443,6 +443,9 @@
                             Hosted Virtual Campaigns
                         </td>
                         <td>
+                            <span id="splitsT1R6"></span>%
+                        </td>
+                        <td>
                             <p>
 
                                 <span style="color: #81cf44;">$</span>
@@ -450,13 +453,13 @@
                             </p>
                         </td>
                         <!-- detailed view of percentages-->
-                        <td>
-                            <span id="splitsT1R6"></span>%
-                        </td>
                     </tr>
                     <tr>
                         <td>
                             Non-Hosted Virtual Campaigns
+                        </td>
+                        <td>
+                            <span id="splitsT2R12"></span>%
                         </td>
                         <td>
                             <p>
@@ -464,9 +467,6 @@
                                 <span style="color: #81cf44;">$</span>
                                 <span id="resultRevenueNoneTotal"></span>
                             </p>
-                        </td>
-                        <td>
-                            <span id="splitsT2R12"></span>%
                         </td>
                     </tr>
 
@@ -487,12 +487,17 @@
                 <td>
                 </td>
                 <td>
+                    <span id="total_percentage"></span>%
+                </td>
+                <td>
                     <div class="resultTotal">
-                        <p>
-
-                            <span style="color: #2e2e2e;">$</span>
-                            <span id="total"></span>
-                        </p>
+                        
+                            <p id="totalRevenue">
+                                
+                                <span style="color: #2e2e2e;">$</span>
+                                <span id="total"></span>
+                            </p>
+                      
                     </div>
                 </td>
 
@@ -839,6 +844,15 @@
         document.getElementById("total").innerText = numberWithCommas(
             sliderR2toR5Total + sliderR2toR5NoneTotal
         );
+
+
+
+        // calculate total percentage
+        var totalPercentage_Virtual = Number(document.getElementById("splitsT1R6").innerText);
+        var totalPercentage_NonVirtual  = Number(document.getElementById("splitsT2R12").innerText);
+        var totalPercentage = document.getElementById("total_percentage");
+
+        totalPercentage.innerText = totalPercentage_NonVirtual + totalPercentage_Virtual;
     }
     // add comma to number
     function numberWithCommas(x) {

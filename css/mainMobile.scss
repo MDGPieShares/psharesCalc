@@ -70,7 +70,12 @@ table {
 
 // Total (Sticky with One)
 .tableFour {
-    width: 100%;
+
+
+    tr td:last-child{
+        width:1%;
+        white-space:nowrap;
+    }
 }
 
 .sectionOne {
@@ -99,8 +104,15 @@ table {
     height: 80%;
     background-color: #81CF44;
 
+    #totalRevenue{
+        white-space:nowrap;
+    }
     #total{
         font-size:5vw;
+    }
+
+    #resultTotal{
+        white-space:nowrap;
     }
   }
   

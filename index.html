@@ -20,7 +20,7 @@
     <title>NonProfit Calculator</title>
 </head>
 
-<body onload="calculateAfterDiscounts(),mobileView()">
+<body onload="calculateAfterDiscounts(),mobileView(),check()">
 
 
 
@@ -29,11 +29,12 @@
         <div class="sectionOne" id="sectionOne" role='navigation'>
 
             <div class="img_header">
-                <img src="assets/pieshares_logo.png" width="80">
+                         
+                 <img id ="logo" src="assets/pieshares_logo.png" >
+   
             </div>
-            <div class="tableOne">
+            <div class="tableOne" id="tableOne">
                 <table class="highlight">
-
                     <thead>
                         <tr>
                             <th>
@@ -69,39 +70,42 @@
                             <input id="myRangeThree" type="range" min="0" max="200" value="100" class="slider" />
                         </td>
                     </tr>
+                   
                     <tr>
                         <td>
                             <div class="resultTotal" >
                                 <p>
                                     <span>Total Spent by Shoppers After
                                         Discounts: </span>
-                                    <span style="color: #81cf44; ">$</span>
-                                    <span id="result"></span>
+                                    <span style="float: right; margin-right: 35px;">
+                                        <span style="color: #81cf44; ">$</span>
+                                        <span id="result"></span>
+                                    </span>
                                     
                                 </p>
                             </div>
                         </td>
 
                     </tr>
-
+                  
 
 
                 </table>
             </div>
 
-            <div class="tableFour">
-                <table class="highlight">
-
+            <div class="tableFour" >
+                <table class="highlight" id="tableFour">
+                    <caption>Total Revenue</caption>
                     <thead>
                         <tr>
                             <th>
                                 Sources
                             </th>
                             <th>
-                                Revenue Earned
+                                Percentage Earned
                             </th>
                             <th>
-                                Percentage Earned
+                                Revenue Earned
                             </th>
                         </tr>
                     </thead>
@@ -111,11 +115,11 @@
                                 Hosted Virtual Campaigns
                             </td>
                             <td>
-                                <span style="color: #81cf44;">$</span>
-                                <span id="resultRevenueTotal"></span>
+                                <span id="splitsT1R6"></span>%
                             </td>
                             <td>
-                                <span id="splitsT1R6"></span>%
+                                <span style="color: #81cf44;">$</span>
+                                <span id="resultRevenueTotal"></span>
                             </td>
                         </tr>
                         <tr>
@@ -123,16 +127,11 @@
                                 Non-Hosted Virtual Campaigns
                             </td>
                             <td>
-                                <span style="color: #81cf44;">$</span>
-                                <span id="resultRevenueNoneTotal"></span>
+                                <span id="splitsT2R12"></span>%
                             </td>
                             <td>
-                                <span id="splitsT2R12"></span>%
-                                <span>
-                                    <i>
-                                        
-                                    </i>
-                                </span>
+                                <span style="color: #81cf44;">$</span>
+                                <span id="resultRevenueNoneTotal"></span>
                             </td>
                         </tr>
                         <tr>
@@ -153,15 +152,18 @@
                     </tbody>
                 </table>
 
-
+                <div id="stepper" class="stepper" onclick="next()">
+                    <button class="waves-effect waves-light btn">Next</button>
+                </div>
             </div>
+            
 
         </div>
 
 
 
         <!-- Virtual Campaign Revenu Projection -->
-        <div class="sectionTwo">
+        <div class="sectionTwo" id="sectionTwo">
 
             <div class="header">
 
@@ -189,13 +191,13 @@
             </div>
 
             <!-- Virtual Campaign Revenu Projection -->
-            <div class="tableTwo">
+            <div class="tableTwo" id="tableTwo">
                 <table class="highlight">
                     <caption>Virtual Campaign Revenue</caption>
                     <thead>
                         <tr>
                             <th>
-                                % Split
+                                Percentage Split
                             </th>
                             <th>
                                 Virtual Campaign
@@ -204,7 +206,7 @@
                                 Revenue
                             </th>
                             <th>
-                                Assumed
+                                Assumptions
                             </th>
                         </tr>
                     </thead>
@@ -340,13 +342,13 @@
 
             <!-- =======Revenue: Non-Hosted Virtual Campaigns Projection================================ -->
 
-            <div class="tableThree">
+            <div class="tableThree" id="tableThree">
                 <table class="highlight">
                     <caption>Non-Hosted Virtual Campaigns</caption>
                     <thead>
                         <tr>
                             <th>
-                                % Split
+                                Percentage Split
                             </th>
                             <th>
                                 Virtual Campaign
@@ -355,7 +357,7 @@
                                 Revenue Received
                             </th>
                             <th>
-                                Assumed
+                                Assumptions
                             </th>
                             <th>
 
@@ -855,6 +857,94 @@
             console.log("not mobile");
         }
     }
+
+
+    // stepper for first using the website 
+    var currentStep = 1;
+
+    function stepOne(){
+       
+       document.getElementById("tableTwo").style.opacity = "50%";
+       document.getElementById("tableThree").style.opacity = "50%";
+       document.getElementById("tableFour").style.opacity = "50%";
+
+
+      
+        
+    }
+
+    function stepTwo(){
+       document.getElementById("tableTwo").style.opacity =  "100%";
+       document.getElementById("tableThree").style.opacity = "50%";
+       document.getElementById("tableFour").style.opacity =  "50%";
+
+    }
+    function stepThree(){
+       document.getElementById("tableTwo").style.opacity =  "100%";
+       document.getElementById("tableThree").style.opacity = "100%";
+       document.getElementById("tableFour").style.opacity =  "50%";
+    }
+
+    function stepFour(){
+      
+       document.getElementById("tableTwo").style.opacity =  "100%";
+       document.getElementById("tableThree").style.opacity = "100%";
+       document.getElementById("tableFour").style.opacity =  "100%";
+       document.getElementById("stepper").remove();
+    }
+
+    function next(){
+        if(currentStep < 4){
+            currentStep+=1;
+            check();
+        }
+    }
+
+    function check(){
+        switch (currentStep) {
+            case 1:
+                console.log("step1");
+                stepOne();
+                break;
+            case 2:
+                console.log("step2");
+                stepTwo();
+                break;
+
+            case 3:
+                console.log("step3");
+                stepThree();
+                break;
+
+            case 4:
+                console.log("step4");
+                stepFour();
+                break;
+        }
+
+    }
+
+
+
+    function Stepper(){
+        Stepper = function(){}; // kill it as soon as it was called
+        
+        //Step 1 Assumptions: Hosted Virtual Campaigns
+        //Step 2 Assumptions: Hosted Virtual Campaigns' Revenue
+        //Step 3 Assumptions: Non-Hosted Virtual Campaigns' Revenue
+        //Step 4 Results: Total Revenue
+        
+
+    };
+
+    
+    document.getElementById("logo").onclick = function() {
+        console.log("clicked");
+
+        var sectionTwo = document.getElementById('sectionTwo');
+        sectionTwo.scrollTop = 0;
+    }
+ 
 
 </script>
 

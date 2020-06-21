@@ -75,8 +75,9 @@ table {
   width: 100%;
 }
 
-.tableFour {
-  width: 100%;
+.tableFour tr td:last-child {
+  width: 1%;
+  white-space: nowrap;
 }
 
 .sectionOne {
@@ -112,7 +113,15 @@ table {
   background-color: #81CF44;
 }
 
+.footerTotal table #totalRevenue {
+  white-space: nowrap;
+}
+
 .footerTotal table #total {
   font-size: 5vw;
+}
+
+.footerTotal table #resultTotal {
+  white-space: nowrap;
 }
 /*# sourceMappingURL=mainMobile.css.map */
