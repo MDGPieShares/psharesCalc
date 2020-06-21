@@ -20,7 +20,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 4vw;
+  white-space: nowrap;
 }
 
 /*space between each tabels override*/
@@ -39,7 +39,6 @@ input::-webkit-inner-spin-button {
 }
 
 table > caption {
-  font-size: 1.7vw;
   margin-bottom: 0.5em;
 }
 
@@ -68,7 +67,6 @@ table > caption {
 }
 
 .tableOne {
-  max-width: 44vw;
   max-height: 40vh;
 }
 
@@ -81,15 +79,15 @@ table > caption {
 }
 
 .tableFour {
-  padding-top: 7em;
-  max-height: 40vh;
+  margin-top: 5em;
+  max-height: 30vh;
 }
 
 .resultTotal {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: x-large;
+  font-size: 1.4  vw;
 }
 
 body {
@@ -140,6 +138,23 @@ body {
   /* cellspacing */
   border-collapse: collapse !important;
   border-spacing: 0 !important;
+  font-size: 1vw !important;
+}
+
+.sectionTwo table .slider {
+  font-size: 1vw !important;
+}
+
+.sectionTwo table tr, .sectionTwo table td, .sectionTwo table th {
+  font-size: 1vw !important;
+}
+
+.sectionTwo table label, .sectionTwo table span {
+  font-size: 1.2vw !important;
+}
+
+.sectionTwo table caption {
+  font-size: 1.2vw !important;
 }
 
 .sectionOne {
@@ -150,6 +165,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-left: 2em;
   max-width: 100%;
   max-height: 100%;
@@ -161,5 +178,26 @@ body {
   /* cellspacing */
   border-collapse: collapse !important;
   border-spacing: 0 !important;
+  font-size: 0.9vw !important;
+}
+
+.sectionOne table .slider {
+  font-size: 0.9vw !important;
+}
+
+.sectionOne table tr, .sectionOne table td, .sectionOne table th {
+  font-size: 0.9vw !important;
+}
+
+.sectionOne table label, .sectionOne table span {
+  font-size: 1vw !important;
+}
+
+.sectionOne table #total, .sectionOne table #result {
+  font-weight: bold;
+}
+
+.sectionOne table input {
+  font-size: 1vw !important;
 }
 /*# sourceMappingURL=main.css.map */

@@ -6,7 +6,7 @@
 
     #calc_Title {
         color: #69cde6;
-        font-size: 16pt;
+        font-size: 6vw;
     }
 }
 
@@ -21,7 +21,7 @@ input::-webkit-inner-spin-button {
 }
 
 table > caption {
-    font-size: x-large;
+    font-size: 5vw;
     margin-bottom: 0.5em;
 }
 
@@ -42,7 +42,7 @@ body {
 }
 .resultTotal {
     align-items: center;
-    font-size: x-large;
+    font-size: 5vw;
 }
 
 /*space between each tabels override*/
@@ -79,4 +79,29 @@ table {
     flex-direction: column;
     height: 100%;
     padding-bottom: 5em;
+
+    #total,#result{
+        font-weight: bold;
+    }
+}
+
+.footerTotal{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 14vh;
+  display: block;
+  border-radius: 2em;
+
+  
+  table{
+    align-items: center;
+    height: 80%;
+    background-color: #81CF44;
+
+    #total{
+        font-size:5vw;
+    }
+  }
+  
 }

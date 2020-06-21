@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,454 +18,521 @@
     <link rel="icon" href="/assets/favicon-16x16.png" sizes="16x16">
     <title>NonProfit Calculator</title>
 </head>
-    <body onload="calculateAfterDiscounts(),mobileView()">
+
+<body onload="calculateAfterDiscounts(),mobileView()">
 
 
-    
-            <div class="sectionOne" id="sectionOne" role='navigation'>
-    
-                <div class="img_header">
-                    <img src="assets/pieshares_logo.png" width="120">
-                    
-                </div>
-                <div class="header">
-                    <div>
-                        <p id="calc_Title">Projection Calculator for Nonprofits</p>
-                    </div>
-                </div>
-                <div class="tableOne">
-                    <table class="highlight">
-    
-                        <thead>
-                            <tr>
-                                <th>
-                                    Hosted Virtual Campaigns
-                                </th>
-                            </tr>
-                        </thead>
-                        <tr>
-                            <td>
-    
-                                <label><span id="displayRangeOne">4</span>
-                                    Campaigns per Year</label>
-                                <input type="range" min="1" max="6" value="4" class="slider" id="myRangeOne" />
-                            </td>
-                        </tr>
-    
-                        <tr>
-                            <td>
-    
-                                <label>
-                                    Members and Supporters per Campaign
-                                </label>
-                                <input id="myRangeTwo" class="input-field" type="number" value="100" />
-                            </td>
-                        </tr>
-    
-                        <tr>
-                            <td>
-    
-                                <label> <span style="color: #81cf44;">$</span><span id="displayRangeThree">100</span> Avg
-                                    Shoppers Spend per Virtual Campaign After
-                                    Discounts</label>
-                                <input id="myRangeThree" type="range" min="0" max="100" value="100" class="slider" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="resultTotal">
-                                    <span style="font-size:medium; padding-right: 1em;">Total Spent by Shoppers After
-                                        Discounts: </span>
-                                    <span style="color: #81cf44;">$</span>
-                                    <span id="result"></span>
-                                </div>
-                            </td>
-    
-                        </tr>
-    
-    
-    
-                    </table>
-                </div>
-         
-    
-    
-    
-            <!-- Virtual Campaign Revenu Projection -->
-            <div class="tableTwo">
-                <table class="highlight">
-                    <caption>Virtual Campaign Revenue</caption>
-                    <thead>
-                        <tr>
-                            <th>
-                                % Split
-                            </th>
-                            <th>
-                                Virtual Campaign
-                            </th>
-                            <th>
-                                Revenue
-                            </th>
-                            <th>
-                                Notes
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>6%</td>
-                            <td>Guaranteed to Nonprofit Campaign Host</td>
-                            <td>
+
+    <div class="sectionOne" id="sectionOne" role='navigation'>
+
+        <div class="img_header">
+            <img src="assets/pieshares_logo.png" width="120">
+
+        </div>
+        <div class="header">
+            <div>
+                <p id="calc_Title">Projection Calculator for Nonprofits</p>
+            </div>
+        </div>
+        <div class="tableOne">
+            <table class="highlight">
+
+                <thead>
+                    <tr>
+                        <th>
+                            Hosted Virtual Campaigns
+                        </th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>
+
+                        <label><span id="displayRangeOne">4</span>
+                            Campaigns per Year</label>
+                        <input type="range" min="1" max="6" value="4" class="slider" id="myRangeOne" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+
+                        <label>
+                            Members and Supporters per Campaign
+                        </label>
+                        <input id="myRangeTwo" class="input-field" type="number" value="100" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+
+                        <label> <span style="color: #81cf44;">$</span><span id="displayRangeThree">100</span> Avg
+                            Shoppers Spend per Virtual Campaign After
+                            Discounts</label>
+                        <input id="myRangeThree" type="range" min="0" max="100" value="100" class="slider" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="resultTotal">
+                            <span style="font-size:medium; padding-right: 1em;">Total Spent by Shoppers After
+                                Discounts: </span>
+                            <p>
+
+                                <span style="color: #81cf44;">$</span>
+                                <span id="result"></span>
+                            </p>
+                        </div>
+                    </td>
+
+                </tr>
+
+
+
+            </table>
+        </div>
+
+
+        <div class="holder" style=" visibility: hidden;">
+
+            <span id="splitsT1R2"></span>%
+            <span id="splitsT1R3"></span>%
+            <span id="splitsT1R4"></span>%
+            <span id="splitsT1R5"></span>%
+
+            <span id="splitsT2R7"></span>%
+            <span id="splitsT2R8"></span>%
+            <span id="splitsT2R9"></span>%
+            <span id="splitsT2R10"></span>%
+            <span id="splitsT2R11"></span>%
+        </div>
+
+        <!-- Virtual Campaign Revenu Projection -->
+        <div class="tableTwo">
+            <table class="highlight">
+                <caption>Virtual Campaign Revenue</caption>
+                <thead>
+                    <tr>
+                        <th>
+                            % Split
+                        </th>
+                        <th>
+                            Virtual Campaign
+                        </th>
+                        <th>
+                            Revenue
+                        </th>
+                        <th>
+                            Assumed
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>6.00%</td>
+                        <td>Guaranteed to Nonprofit Campaign Host</td>
+                        <td>
+                            <p>
+
                                 <span style="color: #81cf44;">$</span>
                                 <span id="resultSplit1"></span>
-                            </td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span id="splitsT1R2"></span>%
-                            </td>
+                            </p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
 
-                            <td> If Favorite Nonprofit of Shopper</td>
-                            <td>
+                            <span>2.00%</span>
+                        </td>
+
+                        <td> Favorite Nonprofit of Shopper</td>
+                        <td>
+                            <p>
+
                                 <span style="color: #81cf44;">$</span>
                                 <span id="resultSplit2"></span>
-                            </td>
-                            <td>
-                                <label>
-                                    Assumed
+                            </p>
+                        </td>
+                        <td>
+                            <label>
+                                <p>
+                                    
                                     <span id="displayRangeR2C1">50</span>% of
-                                    Shoppers selected your Nonprofit
+                                    Shoppers select your Nonprofit
                                     as their Favorite
-                                </label>
-                                <input type="range" min="0" max="100" value="50" step="5" class="slider"
-                                    id="myRangeR2C1" />
-                            <td></td>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span id="splitsT1R3"></span>%
-                            </td>
+                                </p>
+                            </label>
+                            <input type="range" min="0" max="100" value="50" step="5" class="slider" id="myRangeR2C1" />
+                        <td></td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>2.00%</span>
+                        </td>
 
-                            <td> If Favorite Nonprofit of Business</td>
-                            <td>
-                                <span style="color: #81cf44;">$</span>
-                                <span id="resultSplit3"></span>
-                            </td>
-                            <td>
-                                <label>
-                                    Assumed
+                        <td> Favorite Nonprofit of Business</td>
+                        <td>
+                            <span style="color: #81cf44;">$</span>
+                            <span id="resultSplit3"></span>
+                        </td>
+                        <td>
+                            <label>
+                                <p>
+
                                     <span id="displayRangeR3C1">95</span>% of
-                                    Businesses selected your Nonprofit
+                                    Businesses select your Nonprofit
                                     as their Favorite
-                                </label>
-                                <input type="range" min="0" max="100" value="95" step="5" class="slider"
-                                    id="myRangeR3C1" />
-                            </td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                             <td>
-                                <span id="splitsT1R4"></span>%
-                            </td>
-                            <td>
-                                If Shopper referral was assigned to Nonprofit
-                            </td>
-                            <td>
+                                </p>
+                            </label>
+                            <input type="range" min="0" max="100" value="95" step="5" class="slider" id="myRangeR3C1" />
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                            <span>0.50%</span>
+                        </td>
+                        <td>
+                            Shopper referral was assigned to Nonprofit
+                        </td>
+                        <td>
+                            <p>
+
                                 <span style="color: #81cf44;">$</span>
                                 <span id="resultSplit4"></span>
-                            </td>
-                            <td>
-                                <label>
-                                    Assumed
-                                    <span id="displayRangeR4C1">70</span>% of
-                                    Shoppers selected your Nonprofit
-                                    as the referral
-                                </label>
-                                <input type="range" min="0" max="100" value="95" step="5" class="slider"
-                                    id="myRangeR4C1" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span id="splitsT1R5"></span>%
-                            </td>
+                            </p>
+                        </td>
+                        <td>
+                            <label>
+                                <p>
 
-                            <td>
-                                If Business referral was assigned to Nonprofit
-                            </td>
-                            <td>
+                                    <span id="displayRangeR4C1">70</span>% of
+                                    Shoppers select your Nonprofit
+                                    as the referral
+                                </p>
+                            </label>
+                            <input type="range" min="0" max="100" value="95" step="5" class="slider" id="myRangeR4C1" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                            <span>0.50%</span>
+                        </td>
+
+                        <td>
+                            Business referral was assigned to Nonprofit
+                        </td>
+                        <td>
+                            <p>
+
                                 <span style="color: #81cf44;">$</span>
                                 <span id="resultSplit5"></span>
-                            </td>
-                            <td>
-                                <label>
-                                    Assumed
-                                    <span id="displayRangeR5C1">70</span>% of
-                                    Businesses selected your Nonprofit
-                                    as the referral
-                                </label>
-                                <input type="range" min="0" max="100" value="70" step="5" class="slider"
-                                    id="myRangeR5C1" />
-                            </td>
+                            </p>
+                        </td>
+                        <td>
+                            <label>
 
-                        </tr>
-                        <tr>
-                            <td>
-                                Possible Revenue per Year from Campaigns: <span id="splitsT1R6"></span>%
-                            </td>
-                            <td>
-                                <div class="resultTotal">
+                                <span id="displayRangeR5C1">70</span>% of
+                                Businesses select your Nonprofit
+                                as the referral
+                            </label>
+                            <input type="range" min="0" max="100" value="70" step="5" class="slider" id="myRangeR5C1" />
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            Possible Revenue per Year from Campaigns: <span>11%</span>
+                        </td>
+                        <td>
+                            <div class="resultTotal">
+                                <p>
                                     <span style="color: #81cf44;">$</span>
                                     <span id="resultRevenue"></span>
-                                </div>
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-    
-    
-    
-    
-    
-                <!-- =======Revenue: Non-Hosted Virtual Campaigns Projection================================ -->
-    
-                <div class="tableThree">
-                    <table class="highlight">
-                        <caption>Non-Hosted Virtual Campaigns</caption>
-                        <thead>
-                            <tr>
-                                <th>
-                                    % Split
-                                </th>
-                                <th>
-                                    Virtual Campaign
-                                </th>
-                                <th>
-                                    Revenue Received
-                                </th>
-                                <th>
-                                    Notes
-                                </th>
-                                <th>
-    
-                                </th>
-                            </tr>
-                        </thead>
-                        <tr>
-                            
-                            <td>
-                                <span id="splitsT2R7"></span>%
-                            </td>
-    
-                            <td> If Favorite Nonprofit of Shopper</td>
-                            <td>
-                                <span style="color: #81cf44;">$</span>
-                                <span id="resultSplitNone1"></span>
-                            </td>
-                            <td>
-                                <label>
-                                    Assumed
-                                    <span id="displayRangeNoneR2C1">10</span>% of your
-                                    Shoppers spending in other Virtual Campaigns.
-                                </label>
-                                <input type="range" min="0" max="100" value="10" step="5" class="slider"
-                                    id="myRangeNoneR2C1" />
-                            </td>
-                            <td>
-    
-                            </td>
-                        </tr>
-    
-                        <tr>
-                            
-                            <td>
-                                <span id="splitsT2R8"></span>%
-                            </td>
-    
-                            <td> If Favorite Nonprofit of Business</td>
-                            <td>
-                                <span style="color: #81cf44;">$</span>
-                                <span id="resultSplitNone2"></span>
-                            </td>
-                            <td>
-                                <label>
-                                    Assumed
-                                    <span id="displayRangeNoneR3C1">5</span>% of your
-                                    Businesses selling in other Virtual Campaigns.
-                                </label>
-                                <input type="range" min="0" max="100" value="5" step="5" class="slider"
-                                    id="myRangeNoneR3C1" />
-                            </td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span id="splitsT2R9"></span>%
-                            </td>
-    
-                            <td>
-                                If Shopper referral was assigned to Nonprofit
-                            </td>
-                            <td>
-                                <span style="color: #81cf44;">$</span>
-                                <span id="resultSplitNone3"></span>
-                            </td>
-                            <td>
-                                <label>
-                                    Assumed
-                                    <span id="displayRangeNoneR4C1">70</span>% of
-                                    Shoppers selected your Nonprofit as
-                                    the referral
-                                </label>
-                                <input type="range" min="0" max="100" value="70" step="5" class="slider"
-                                    id="myRangeNoneR4C1" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span id="splitsT2R10"></span>%
-                            </td>
-    
-                            <td>
-                                If Business referral was assigned to Nonprofit
-                            </td>
-                            <td>
-                                <span style="color: #81cf44;">$</span>
-                                <span id="resultSplitNone4"></span>
-                            </td>
-                            <td>
-                                <label>
-                                    Assumed
-                                    <span id="displayRangeNoneR5C1">70</span>% of
-                                    Businesses selected your Nonprofit as
-                                    the referral
-                                </label>
-    
-                                <input type="range" min="0" max="100" value="70" step="5" class="slider"
-                                    id="myRangeNoneR5C1" />
-                            </td>
-                        </tr>
-                        <tr>
-                            
-                            <td>
-                                <span id="splitsT2R11"></span>%
-                            </td>
-    
-                            <td>
-                                If Nonprofit referral was assigned to Nonprofit
-                            </td>
-                            <td>
-                                <span style="color: #81cf44;">$</span>
-                                <span id="resultSplitNone5"></span>
-                            </td>
-                            <td>
-                                <label>
-                                    Assumed
-                                    <span id="displayRangeNoneR6C1">0</span>% of the
-                                    Nonprofits hosting Virtual Campaigns selected your
-                                    Nonprofit as the referral
-                                </label>
-                                <input type="range" min="0" max="100" value="0" step="5" class="slider"
-                                    id="myRangeNoneR6C1" />
-                            </td>
-                            <td></td>
-    
-    
-    
-                        </tr>
-    
-                        <tr>
-                            
-                            <td>Possible Revenue per Year from Non-Hosted Campaigns:
-                                <span id="splitsT2R12"></span>%
-                            </td>
-                            <td>
-                                <div class="resultTotal">
-                                    <span style="color: #81cf44;">$</span>
-                                    <span id="resultRevenueNone"></span>
-                                </div>
-                            </td>
-    
-    
-    
-                        </tr>
-                    </table>
-                </div>
+                                </p>
+                            </div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-                <div class="tableFour">
-                    <table class="highlight">
-                        <caption>Total Revenue</caption>
-                        <thead>
-                            <tr>
-                                <th>
-                                    Sources
-                                </th>
-                                <th>
-                                    Received
-                                </th>
-                                <th>
-                                    Notes
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    Hosted Virtual Campaigns
-                                </td>
-                                <td>
-                                    <span style="color: #81cf44;">$</span>
-                                    <span id="resultRevenueTotal"></span>
-                                </td>
-                                <td>
-                                    Virtual Campaigns your Nonprofit hosts
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Non-Hosted Virtual Campaigns
-                                </td>
-                                <td>
-                                    <span style="color: #81cf44;">$</span>
-                                    <span id="resultRevenueNoneTotal"></span>
-                                </td>
-                                <td>
-                                    Virtual Campaigns your Nonprofit does
-                                    NOT host
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span style="font-size:medium; padding-right: 1em;"> Possible Revenue per Year: </span>
-                                </td>
-                                <td>
-                                </td>
-                                <td>
-                                    <div class="resultTotal">
-                                        <span style="color: #81cf44;">$</span>
-                                        <span id="total"></span>
-                                    </div>
-                                </td>
-    
-                            </tr>
-    
-                        </tbody>
-                    </table>
-                    
-    
-                </div>
-         
+
+
+
+
+        <!-- =======Revenue: Non-Hosted Virtual Campaigns Projection================================ -->
+
+        <div class="tableThree">
+            <table class="highlight">
+                <caption>Non-Hosted Virtual Campaigns</caption>
+                <thead>
+                    <tr>
+                        <th>
+                            % Split
+                        </th>
+                        <th>
+                            Virtual Campaign
+                        </th>
+                        <th>
+                            Revenue Received
+                        </th>
+                        <th>
+                            Assumed
+                        </th>
+                        <th>
+
+                        </th>
+                    </tr>
+                </thead>
+                <tr>
+
+                    <td>
+                        <span>2.00%</span>
+                    </td>
+
+                    <td>Favorite Nonprofit of Shopper</td>
+                    <td>
+                        <p>
+
+                            <span style="color: #81cf44;">$</span>
+                            <span id="resultSplitNone1"></span>
+                        </p>
+                    </td>
+                    <td>
+                        <label>
+                            <p>
+
+                                <span id="displayRangeNoneR2C1">10</span>% of your
+                                Shoppers spending in other Virtual Campaigns.
+                            </p>
+                        </label>
+                        <input type="range" min="0" max="100" value="10" step="5" class="slider" id="myRangeNoneR2C1" />
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <span>2.00%</span>
+                    </td>
+
+                    <td>Favorite Nonprofit of Business</td>
+                    <td>
+                        <p>
+
+                            <span style="color: #81cf44;">$</span>
+                            <span id="resultSplitNone2"></span>
+                        </p>
+                    </td>
+                    <td>
+                        <label>
+                            <p>
+
+                                <span id="displayRangeNoneR3C1">5</span>% of your
+                                Businesses selling in other Virtual Campaigns.
+                            </p>
+                        </label>
+                        <input type="range" min="0" max="100" value="5" step="5" class="slider" id="myRangeNoneR3C1" />
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>0.50%</span>
+                    </td>
+
+                    <td>
+                        Shopper referral was assigned to Nonprofit
+                    </td>
+                    <td>
+                        <p>
+
+                            <span style="color: #81cf44;">$</span>
+                            <span id="resultSplitNone3"></span>
+                        </p>
+                    </td>
+                    <td>
+                        <label>
+
+                            <span id="displayRangeNoneR4C1">70</span>% of
+                            Shoppers select your Nonprofit as
+                            the referral
+                        </label>
+                        <input type="range" min="0" max="100" value="70" step="5" class="slider" id="myRangeNoneR4C1" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>0.50%</span>
+                    </td>
+
+                    <td>
+                        Business referral was assigned to Nonprofit
+                    </td>
+                    <td>
+                        <p>
+
+                            <span style="color: #81cf44;">$</span>
+                            <span id="resultSplitNone4"></span>
+                        </p>
+                    </td>
+                    <td>
+                        <label>
+
+                            <span id="displayRangeNoneR5C1">70</span>% of
+                            Businesses select your Nonprofit as
+                            the referral
+                        </label>
+
+                        <input type="range" min="0" max="100" value="70" step="5" class="slider" id="myRangeNoneR5C1" />
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>
+                        <span>0.50%</span>
+                    </td>
+
+                    <td>
+                        Nonprofit referral was assigned to Nonprofit
+                    </td>
+                    <td>
+                        <p>
+
+                            <span style="color: #81cf44;">$</span>
+                            <span id="resultSplitNone5"></span>
+                        </p>
+                    </td>
+                    <td>
+                        <label>
+
+                            <span id="displayRangeNoneR6C1">0</span>% of the
+                            Nonprofits hosting Virtual Campaigns select your
+                            Nonprofit as the referral
+                        </label>
+                        <input type="range" min="0" max="100" value="0" step="5" class="slider" id="myRangeNoneR6C1" />
+                    </td>
+                    <td></td>
+
+
+
+                </tr>
+
+                <tr>
+
+                    <td>Possible Revenue per Year from Non-Hosted Campaigns:
+                        <span>5.50</span>%
+                    </td>
+                    <td>
+                        <div class="resultTotal">
+                            <p>
+
+                                <span style="color: #81cf44;">$</span>
+                                <span id="resultRevenueNone"></span>
+                            </p>
+                        </div>
+                    </td>
+
+
+
+                </tr>
+            </table>
+        </div>
+
+        <div class="tableFour">
+            <table class="highlight">
+                <caption>Total Revenue</caption>
+                <thead>
+                    <tr>
+                        <th>
+                            Sources
+                        </th>
+                        <th>
+                            Received
+                        </th>
+                        <th>
+                            Percentage Earned
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Hosted Virtual Campaigns
+                        </td>
+                        <td>
+                            <p>
+
+                                <span style="color: #81cf44;">$</span>
+                                <span id="resultRevenueTotal"></span>
+                            </p>
+                        </td>
+                        <!-- detailed view of percentages-->
+                        <td>
+                            <span id="splitsT1R6"></span>%
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Non-Hosted Virtual Campaigns
+                        </td>
+                        <td>
+                            <p>
+
+                                <span style="color: #81cf44;">$</span>
+                                <span id="resultRevenueNoneTotal"></span>
+                            </p>
+                        </td>
+                        <td>
+                            <span id="splitsT2R12"></span>%
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+        </div>
+
     </div>
-    
-    </body>
-    
+
+    <div class="footerTotal">
+        <table>
+            <tr>
+                <td>
+                    <span style="font-size:4vw;"> Possible Total Revenue per Year: </span>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <div class="resultTotal">
+                        <p>
+
+                            <span style="color: #2e2e2e;">$</span>
+                            <span id="total"></span>
+                        </p>
+                    </div>
+                </td>
+
+            </tr>
+        </table>
+
+    </div>
+
+</body>
+
 
 <script>
 
@@ -578,24 +646,26 @@
         );
 
         // get vals for splits calculations 
-var Split2 = document.getElementById("splitsT1R2")
-var Split3 = document.getElementById("splitsT1R3")
-var Split4 = document.getElementById("splitsT1R4")
-var Split5 = document.getElementById("splitsT1R5")
-var Split6 = document.getElementById("splitsT1R6")
+        var Split2 = document.getElementById("splitsT1R2")
+        var Split3 = document.getElementById("splitsT1R3")
+        var Split4 = document.getElementById("splitsT1R4")
+        var Split5 = document.getElementById("splitsT1R5")
+        var Split6 = document.getElementById("splitsT1R6")
 
-        
+        var s2, s3, s4, s5;
 
-    Split2.innerText = ( ((0.02) * Number(valR2C1)/100 ) * 100).toFixed(2);  
-    Split3.innerText = ( ((0.02) * Number(valR3C1)/100 ) * 100).toFixed(2);  
-    Split4.innerText = ( ((0.005) * Number(valR4C1)/100 ) * 100).toFixed(2);  
-    Split5.innerText = ( ((0.005) * Number(valR5C1)/100 ) * 100).toFixed(2);  
-    Split6.innerText = ( 
-        6 + 
-        Number(Split2.innerText) +
-        Number(Split3.innerText) +
-        Number(Split4.innerText) +
-        Number(Split5.innerText) ).toFixed(2) ;
+
+        if (Number(valR2C1) == 0) { Split2.innerText = 0.00; s2 = 0; } else { Split2.innerText = 2.00; s2 = 2.00; }
+        if (Number(valR3C1) == 0) { Split3.innerText = 0.00; s3 = 0; } else { Split3.innerText = 2.00; s3 = 2.00; }
+        if (Number(valR4C1) == 0) { Split4.innerText = 0.00; s4 = 0; } else { Split4.innerText = 0.50; s4 = 0.50; }
+        if (Number(valR5C1) == 0) { Split5.innerText = 0.00; s5 = 0; } else { Split5.innerText = 0.50; s5 = 0.50; }
+
+        Split6.innerText = (
+            6 +
+            s2 +
+            s3 +
+            s4 +
+            s5);
 
 
         // calculate 6% Guaranteed to Nonprofit Campaign Host
@@ -721,27 +791,24 @@ var Split6 = document.getElementById("splitsT1R6")
 
 
 
-                // get vals for splits calculations 
-var Split7 = document.getElementById("splitsT2R7")
-var Split8 = document.getElementById("splitsT2R8")
-var Split9 = document.getElementById("splitsT2R9")
-var Split10 = document.getElementById("splitsT2R10")
-var Split11 = document.getElementById("splitsT2R11")
-var Split12 = document.getElementById("splitsT2R12")
+        // get vals for splits calculations 
+        var Split7 = document.getElementById("splitsT2R7")
+        var Split8 = document.getElementById("splitsT2R8")
+        var Split9 = document.getElementById("splitsT2R9")
+        var Split10 = document.getElementById("splitsT2R10")
+        var Split11 = document.getElementById("splitsT2R11")
+        var Split12 = document.getElementById("splitsT2R12")
 
-        
+        var s7, s8, s9, s10, s11;
 
-    Split7.innerText = ( ((0.02) * Number(valNoneR2C1)/100 ) * 100).toFixed(2);  
-    Split8.innerText = ( ((0.02) * Number(valNoneR3C1)/100 ) * 100).toFixed(2);  
-    Split9.innerText = ( ((0.005) * Number(valNoneR4C1)/100 ) * 100).toFixed(2);  
-    Split10.innerText = ( ((0.005) * Number(valNoneR5C1)/100 ) * 100).toFixed(2);  
-    Split11.innerText = ( ((0.005) * Number(valNoneR6C1)/100 ) * 100).toFixed(2);  
-    Split12.innerText = ( 
-        Number(Split7.innerText) +
-        Number(Split8.innerText) +
-        Number(Split9.innerText) +
-        Number(Split10.innerText) +
-        Number(Split11.innerText)).toFixed(2) ;
+        if (Number(valNoneR2C1) == 0) { Split7.innerText = 0.00; s7 = 0; } else { Split7.innerText = 2.00; s7 = 2.00; }
+        if (Number(valNoneR3C1) == 0) { Split8.innerText = 0.00; s8 = 0; } else { Split8.innerText = 2.00; s8 = 2.00; }
+        if (Number(valNoneR4C1) == 0) { Split9.innerText = 0.00; s9 = 0; } else { Split9.innerText = 0.50; s9 = 0.50; }
+        if (Number(valNoneR5C1) == 0) { Split10.innerText = 0.00; s10 = 0; } else { Split10.innerText = 0.50; s10 = 0.50; }
+        if (Number(valNoneR6C1) == 0) { Split11.innerText = 0.00; s11 = 0; } else { Split11.innerText = 0.50; s11 = 0.50; }
+
+
+        Split12.innerText = (s7 + s8 + s9 + s10 + s11);
 
         resultSplitNone1.innerText = Math.ceil(
             0.02 * Number(outputFourVal) * (valNoneR2C1 / 100)
@@ -803,26 +870,27 @@ var Split12 = document.getElementById("splitsT2R12")
             sliderR2toR5Total + sliderR2toR5NoneTotal
         );
     }
-       // add comma to number
-       function numberWithCommas(x) { 
+    // add comma to number
+    function numberWithCommas(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
- // detect mobile phone
- function mobileView() {
-                if (
-                    typeof window.orientation !== "undefined" ||
-                    navigator.userAgent.indexOf("IEMobile") !== -1
-                ) {
-                    console.log("mobile");
-                    // is a mobile
+    // detect mobile phone
+    function mobileView() {
+        if (
+            typeof window.orientation !== "undefined" ||
+            navigator.userAgent.indexOf("IEMobile") !== -1
+        ) {
+            console.log("mobile");
+            // is a mobile
 
-                } else {
-                    // not mobile
-                    console.log("not mobile");
-                    document.location ="index.html";
-                }
-            }
+        } else {
+            // not mobile
+            console.log("not mobile");
+            document.location = "index.html";
+        }
+    }
 </script>
 
 <script type="text/javascript" src="js/materialize.min.js"></script>
+
 </html>
