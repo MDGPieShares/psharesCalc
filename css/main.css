@@ -141,20 +141,20 @@ body {
   font-size: 1vw !important;
 }
 
-.sectionTwo table .slider {
-  font-size: 1vw !important;
-}
-
 .sectionTwo table tr, .sectionTwo table td, .sectionTwo table th {
   font-size: 1vw !important;
 }
 
 .sectionTwo table label, .sectionTwo table span {
-  font-size: 1.2vw !important;
+  font-size: 1vw !important;
 }
 
 .sectionTwo table caption {
   font-size: 1.2vw !important;
+}
+
+.sectionTwo table .slider {
+  font-weight: bold !important;
 }
 
 .sectionOne {
@@ -178,15 +178,10 @@ body {
   /* cellspacing */
   border-collapse: collapse !important;
   border-spacing: 0 !important;
-  font-size: 0.9vw !important;
-}
-
-.sectionOne table .slider {
-  font-size: 0.9vw !important;
 }
 
 .sectionOne table tr, .sectionOne table td, .sectionOne table th {
-  font-size: 0.9vw !important;
+  font-size: 1vw !important;
 }
 
 .sectionOne table label, .sectionOne table span {
@@ -194,10 +189,11 @@ body {
 }
 
 .sectionOne table #total, .sectionOne table #result {
+  font-size: 1.2;
   font-weight: bold;
 }
 
 .sectionOne table input {
-  font-size: 1vw !important;
+  font-size: 0.9vw !important;
 }
 /*# sourceMappingURL=main.css.map */
