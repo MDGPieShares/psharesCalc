@@ -7378,7 +7378,6 @@ input[type=range] + .thumb {
   input[type=range] + .thumb .value {
     display: block;
     text-align: center;
-    color: red;
     visibility: hidden;
    
   }
@@ -7396,8 +7395,8 @@ input[type=range]::-webkit-slider-runnable-track {
 
 input[type=range]::-webkit-slider-thumb {
   border: none;
-  height: 25px;
-  width:  25px;
+  height: 20px;
+  width:  20px;
   border-radius: 50%;
   background: #69CDE6;
   -webkit-transition: -webkit-box-shadow .3s;
@@ -7408,7 +7407,7 @@ input[type=range]::-webkit-slider-thumb {
   background-color: #69CDE6;
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
-  margin: -10px 0 0 0;
+  margin: -8px 0 0 0;
 }
 
 .keyboard-focused input[type=range]:focus:not(.active)::-webkit-slider-thumb {
@@ -7434,8 +7433,8 @@ input[type=range]::-moz-focus-inner {
 
 input[type=range]::-moz-range-thumb {
   border: none;
-  height: 25px;
-  width:  25px;
+  height: 20px;
+  width:  20px;
   border-radius: 50%;
   background: #26a69a;
   -webkit-transition: -webkit-box-shadow .3s;
@@ -8262,6 +8261,7 @@ input[type=range]::-ms-thumb {
   position: relative;
   height: 10px;
   width: 100%;
+  
 }
 
 .slider.fullscreen {

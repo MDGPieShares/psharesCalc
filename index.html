@@ -44,7 +44,7 @@
                     <tr>
                         <td>
 
-                            <label><span id="displayRangeOne">4</span>
+                            <label><span id="displayRangeOne" style="font-weight: bold;">4</span>
                                 Campaigns per Year</label>
                             <input type="range" min="1" max="6" value="4" class="slider" id="myRangeOne" />
                         </td>
@@ -63,7 +63,7 @@
                     <tr>
                         <td>
 
-                            <label> <span style="color: #81cf44;">$</span><span id="displayRangeThree">100</span> Avg
+                            <label> <span style="color: #81cf44;">$ </span><span id="displayRangeThree">100</span> Avg
                                 Shoppers Spend per Virtual Campaign After
                                 Discounts</label>
                             <input id="myRangeThree" type="range" min="0" max="200" value="100" class="slider" />
@@ -137,7 +137,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <span style="font-size: 1.4vw;"> Possible Revenue per Year: </span>
+                                <span style="font-size: 1.4vw;"> Possible Total Revenue per Year: </span>
                             </td>
                             <td>
                             </td>
@@ -176,12 +176,16 @@
                 <span id="splitsT1R3"></span>%
                 <span id="splitsT1R4"></span>%
                 <span id="splitsT1R5"></span>%
+
+                <span id="resultRevenue"></span>
     
                 <span id="splitsT2R7"></span>%
                 <span id="splitsT2R8"></span>%
                 <span id="splitsT2R9"></span>%
                 <span id="splitsT2R10"></span>%
                 <span id="splitsT2R11"></span>%
+
+                <span id="resultRevenueNone"></span>
             </div>
 
             <!-- Virtual Campaign Revenu Projection -->
@@ -230,7 +234,7 @@
                                 <label>
                                     <p>
 
-                                        <span id="displayRangeR2C1">50</span>% of
+                                        <span id="displayRangeR2C1" style="font-weight: bold;">50</span>% of
                                         Shoppers select your Nonprofit
                                         as their Favorite
                                     </p>        
@@ -258,7 +262,7 @@
                                     
                                     <p>
 
-                                        <span id="displayRangeR3C1">95</span>% of
+                                        <span id="displayRangeR3C1" style="font-weight: bold;">95</span>% of
                                         Businesses select your Nonprofit
                                         as their Favorite
                                     </p>
@@ -288,7 +292,7 @@
 
                                     <p>
 
-                                        <span id="displayRangeR4C1">70</span>% of
+                                        <span id="displayRangeR4C1" style="font-weight: bold;">70</span>% of
                                         Shoppers select your Nonprofit
                                         as the referral
                                     </p>
@@ -317,7 +321,7 @@
                                 <label>
                                     <p>
 
-                                        <span id="displayRangeR5C1">70</span>% of
+                                        <span id="displayRangeR5C1" style="font-weight: bold;">70</span>% of
                                         Businesses select your Nonprofit
                                         as the referral
                                     </p>
@@ -327,26 +331,9 @@
                             </td>
 
                         </tr>
-                        <tr>
-                            <td>
-                                Possible Revenue per Year from Campaigns: <span>11%</span>
-                            </td>
-                            <td>
-                                <div class="resultTotal">
-                                    <p>
-                                        <span style="color: #81cf44;">$</span>
-                                        <span id="resultRevenue"></span>
-                                    </p>
-                                </div>
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
-
 
 
 
@@ -389,7 +376,7 @@
                         <td>
                             <label>
 
-                                <span id="displayRangeNoneR2C1">10</span>% of your
+                                <span id="displayRangeNoneR2C1" style="font-weight:bold;">10</span>% of your
                                 Shoppers spending in other Virtual Campaigns.
                             </label>
                             <input type="range" min="0" max="100" value="10" step="5" class="slider"
@@ -414,7 +401,7 @@
                         <td>
                             <label>
 
-                                <span id="displayRangeNoneR3C1">5</span>% of your
+                                <span id="displayRangeNoneR3C1" style="font-weight: bold;">5</span>% of your
                                 Businesses selling in other Virtual Campaigns.
                             </label>
                             <input type="range" min="0" max="100" value="5" step="5" class="slider"
@@ -437,7 +424,7 @@
                         <td>
                             <label>
 
-                                <span id="displayRangeNoneR4C1">70</span>% of
+                                <span id="displayRangeNoneR4C1" style="font-weight: bold;">70</span>% of
                                 Shoppers select your Nonprofit as
                                 the referral
                             </label>
@@ -460,7 +447,7 @@
                         <td>
                             <label>
 
-                                <span id="displayRangeNoneR5C1">70</span>% of
+                                <span id="displayRangeNoneR5C1" style="font-weight: bold;">70</span>% of
                                 Businesses select your Nonprofit as
                                 the referral
                             </label>
@@ -485,7 +472,7 @@
                         <td>
                             <label>
 
-                                <span id="displayRangeNoneR6C1">0</span>% of the
+                                <span id="displayRangeNoneR6C1" style="font-weight: bold;">0</span>% of the
                                 Nonprofits hosting Virtual Campaigns select your
                                 Nonprofit as the referral
                             </label>
@@ -498,21 +485,6 @@
 
                     </tr>
 
-                    <tr>
-
-                        <td>Possible Revenue per Year from Non-Hosted Campaigns:
-                            <span>5.50</span>%
-                        </td>
-                        <td>
-                            <div class="resultTotal">
-                                <span style="color: #81cf44;">$</span>
-                                <span id="resultRevenueNone"></span>
-                            </div>
-                        </td>
-
-
-
-                    </tr>
                 </table>
             </div>
 

@@ -62,7 +62,8 @@ table > caption {
 // Inital (Sticky One)
 .tableOne {
     
-    max-height: 40vh;
+    height: 40vh;
+    max-height: 40% ;
 }
 
 .tableTwo {
@@ -74,18 +75,20 @@ table > caption {
 
 // Total (Sticky with One)
 .tableFour {
-    margin-top: 6.5em;
-   max-height: 35vh;
+    margin-top: 4em;
+    height: 40vh;
+    max-height: 40%;
     
 }
 
 .resultTotal {
     align-items: center;
-    font-size: 1.4  vw;
+    font-size: 1vw;
 }
 
 body {
     margin: 0;
+    
 }
 
 ::-webkit-scrollbar {
@@ -100,6 +103,10 @@ body {
     
     height: 100vh;
 }
+
+
+// highlight slider values 
+
 
 .sectionTwo {
     padding: 0 1em;
@@ -123,20 +130,24 @@ body {
         /* cellspacing */
         border-collapse: collapse !important;
         border-spacing: 0 !important;
-        font-size: 1vw!important;
-        .slider{
-            font-size: 1vw!important;
-        }
+        
+
         tr,td,th{
             font-size: 1vw!important;
         }
+
         label,span{
-            font-size: 1.2vw!important;
+            font-size: 1vw!important;
         }
         caption{
             font-size: 1.2vw!important;
         }
+        
+
     }
+
+
+
 }
 
 .sectionOne {
@@ -153,26 +164,27 @@ body {
         /* cellspacing */
         border-collapse: collapse !important;
         border-spacing: 0 !important;
-        font-size: .9vw!important;
-        .slider{
-            font-size: .9vw!important;
-        }
+
+        table-layout: fixed ;
+        text-align: left;
 
         tr,td,th{
-            font-size: .9vw!important;
+            font-size: 1vw!important;
         }
         label,span{
             font-size: 1vw!important;
         }
 
         #total,#result{
+            font-size: 1.2vw!;
             font-weight: bold;
         }
 
         input {
             font-size: 1vw!important;
+            
         }
+
         
     }
 }
-
