@@ -1,0 +1,107 @@
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #calc_Title {
+        color: #69cde6;
+        font-size: 6vw;
+    }
+}
+
+th td {
+    padding: 0 !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+table > caption {
+    font-size: 5vw;
+    margin-bottom: 0.5em;
+}
+
+
+.img_header {
+    display: block;
+    margin-top: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+html,body{
+    overflow-x: hidden!important;
+}
+body {
+    margin: 0;
+}
+.resultTotal {
+    align-items: center;
+    font-size: 5vw;
+}
+
+/*space between each tabels override*/
+table {
+    margin-top: 2em !important;
+    background-color: #f5f5f5;
+    border-radius: 0.5em;
+    /* cellspacing */
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+}
+
+
+// Inital (Sticky One)
+.tableOne {
+    width: 100%;
+}
+
+.tableTwo {
+   width: 100%;
+}
+.tableThree {
+   width: 100%;
+}
+
+// Total (Sticky with One)
+.tableFour {
+    width: 100%;
+}
+
+.sectionOne {
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 5em;
+
+    #total,#result{
+        font-weight: bold;
+    }
+}
+
+.footerTotal{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 14vh;
+  display: block;
+  border-radius: 2em;
+
+  
+  table{
+    align-items: center;
+    height: 80%;
+    background-color: #81CF44;
+
+    #total{
+        font-size:5vw;
+    }
+  }
+  
+}
