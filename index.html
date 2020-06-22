@@ -24,19 +24,19 @@
 
 
     <div id="stepper" class="stepper" onclick="next()">
-        <button class="waves-effect waves-light btn">Next</button>
+        <button class="waves-effect waves-light btn" id="navButton">1 of 4</button>
     </div>
 
     <div class="wrapper">
         <div class="sectionOne" id="sectionOne" role='navigation' title="PiesShares INC logo">
 
-            
+
             <div class="img_header">
-                         
-                <img id ="logo" src="assets/pieshares_logo.png" width="65" > 
+
+                <img id="logo" src="assets/pieshares_logo.png" width="65">
             </div>
             <div class="tableOne" id="tableOne">
-                
+
                 <table class="highlight">
                     <thead>
                         <tr>
@@ -73,10 +73,10 @@
                             <input id="myRangeThree" type="range" min="0" max="200" value="100" class="slider" />
                         </td>
                     </tr>
-                   
+
                     <tr>
                         <td>
-                            <div class="resultTotal" >
+                            <div class="resultTotal">
                                 <p>
                                     <span>Total Spent by Shoppers After
                                         Discounts: </span>
@@ -84,19 +84,19 @@
                                         <span style="color: #81cf44; ">$</span>
                                         <span id="result"></span>
                                     </span>
-                                    
+
                                 </p>
                             </div>
                         </td>
 
                     </tr>
-                  
+
 
 
                 </table>
             </div>
 
-            <div class="tableFour" >
+            <div class="tableFour">
                 <table class="highlight" id="tableFour">
                     <caption>Total Revenue</caption>
                     <thead>
@@ -155,7 +155,7 @@
                     </tbody>
                 </table>
             </div>
-            
+
 
         </div>
 
@@ -170,7 +170,7 @@
                     <p id="calc_Title">Projection Calculator for Nonprofits</p>
                 </div>
             </div>
-            
+
             <div class="holder" style=" visibility: hidden;">
 
                 <span id="splitsT1R2"></span>%
@@ -179,7 +179,7 @@
                 <span id="splitsT1R5"></span>%
 
                 <span id="resultRevenue"></span>
-    
+
                 <span id="splitsT2R7"></span>%
                 <span id="splitsT2R8"></span>%
                 <span id="splitsT2R9"></span>%
@@ -218,7 +218,7 @@
                                 <span id="resultSplit1"></span>
                             </td>
                             <td></td>
-                            <td></td>
+                            
                         </tr>
                         <tr>
                             <td>
@@ -238,11 +238,10 @@
                                         <span id="displayRangeR2C1" style="font-weight: bold;">50</span>% of
                                         Shoppers select your Nonprofit
                                         as their Favorite
-                                    </p>        
+                                    </p>
                                 </label>
                                 <input type="range" min="0" max="100" value="50" step="5" class="slider"
                                     id="myRangeR2C1" />
-                            <td></td>
                             </td>
                         </tr>
                         <tr>
@@ -260,7 +259,7 @@
                             </td>
                             <td>
                                 <label>
-                                    
+
                                     <p>
 
                                         <span id="displayRangeR3C1" style="font-weight: bold;">95</span>% of
@@ -271,7 +270,7 @@
                                 <input type="range" min="0" max="100" value="95" step="5" class="slider"
                                     id="myRangeR3C1" />
                             </td>
-                            <td></td>
+                        
                         </tr>
                         <tr>
                             <td>
@@ -383,9 +382,7 @@
                             <input type="range" min="0" max="100" value="10" step="5" class="slider"
                                 id="myRangeNoneR2C1" />
                         </td>
-                        <td>
-
-                        </td>
+                       
                     </tr>
 
                     <tr>
@@ -408,7 +405,7 @@
                             <input type="range" min="0" max="100" value="5" step="5" class="slider"
                                 id="myRangeNoneR3C1" />
                         </td>
-                        <td></td>
+                    
                     </tr>
                     <tr>
                         <td>
@@ -480,10 +477,7 @@
                             <input type="range" min="0" max="100" value="0" step="5" class="slider"
                                 id="myRangeNoneR6C1" />
                         </td>
-                        <td></td>
-
-
-
+     
                     </tr>
 
                 </table>
@@ -630,7 +624,7 @@
             s2 +
             s3 +
             s4 +
-            s5+.00).toFixed(2);
+            s5 + .00).toFixed(2);
 
 
         // calculate 6% Guaranteed to Nonprofit Campaign Host
@@ -773,7 +767,7 @@
         if (Number(valNoneR6C1) == 0) { Split11.innerText = 0.00; s11 = 0; } else { Split11.innerText = 0.50; s11 = 0.50; }
 
 
-        Split12.innerText = (s7 + s8 + s9 + s10 + s11+.00).toFixed(2);
+        Split12.innerText = (s7 + s8 + s9 + s10 + s11 + .00).toFixed(2);
 
         resultSplitNone1.innerText = Math.ceil(
             0.02 * Number(outputFourVal) * (valNoneR2C1 / 100)
@@ -861,55 +855,68 @@
     // stepper for first using the website 
     var currentStep = 1;
 
-    function stepOne(){
+    function stepOne() {
 
-       document.getElementById("tableTwo").style.opacity = "50%";
-       document.getElementById("tableThree").style.opacity = "50%";
-       document.getElementById("tableFour").style.opacity = "50%";
+        document.getElementById("tableOne").style.opacity = "100%";
+        document.getElementById("tableTwo").style.opacity = "30%";
+        document.getElementById("tableThree").style.opacity = "30%";
+        document.getElementById("tableFour").style.opacity = "30%";
+
+        // highlight border
+        document.getElementById("tableOne").style.backgroundColor = "red!important";
 
 
-      
-        
+        document.getElementById("navButton").innerText = "1 of 4";
+
     }
 
     // steper function to help navigate the tables
-    function stepTwo(){
-       document.getElementById("tableOne").style.opacity =  "50%";
-       document.getElementById("tableTwo").style.opacity =  "100%";
-       document.getElementById("tableThree").style.opacity = "50%";
-       document.getElementById("tableFour").style.opacity =  "50%";
+    function stepTwo() {
+        document.getElementById("tableOne").style.opacity = "30%";
+        document.getElementById("tableTwo").style.opacity = "100%";
+        document.getElementById("tableThree").style.opacity = "30%";
+        document.getElementById("tableFour").style.opacity = "30%";
+
+        document.getElementById("navButton").innerText = "2 of 4";
+        var myElement = document.getElementById('tableTwo');
+        var topPos = myElement.offsetTop;
+        document.getElementById("sectionTwo").scrollTop = topPos;
 
     }
-    function stepThree(){
+    function stepThree() {
 
-       document.getElementById("tableOne").style.opacity =  "50%";
-       document.getElementById("tableTwo").style.opacity =  "50%";
-       document.getElementById("tableThree").style.opacity = "100%";
-       document.getElementById("tableFour").style.opacity =  "50%";
-       
-       var myElement = document.getElementById('tableThree');
-       var topPos = myElement.offsetTop;
-       document.getElementById("sectionTwo").scrollTop = topPos;
+        document.getElementById("tableOne").style.opacity = "30%";
+        document.getElementById("tableTwo").style.opacity = "30%";
+        document.getElementById("tableThree").style.opacity = "100%";
+        document.getElementById("tableFour").style.opacity = "30%";
+
+        document.getElementById("navButton").innerText = "3 of 4";
+
+        var myElement = document.getElementById('tableThree');
+        var topPos = myElement.offsetTop;
+        document.getElementById("sectionTwo").scrollTop = topPos;
     }
 
-    function stepFour(){
-       document.getElementById("tableOne").style.opacity =  "100%";
-       document.getElementById("tableTwo").style.opacity =   "100%";
-       document.getElementById("tableThree").style.opacity = "100%";
-       document.getElementById("tableFour").style.opacity =  "100%";
+    function stepFour() {
+        document.getElementById("tableOne").style.opacity = "100%";
+        document.getElementById("tableTwo").style.opacity = "100%";
+        document.getElementById("tableThree").style.opacity = "100%";
+        document.getElementById("tableFour").style.opacity = "100%";
 
-       window.scrollTo(0,document.body.scrollHeight);
-       document.getElementById("stepper").remove();
+        document.getElementById("navButton").innerText = "4 of 4";
+
+        window.scrollTo(0, document.body.scrollHeight);
+        document.getElementById("stepper").remove();
     }
 
-    function next(){
-        if(currentStep < 4){
-            currentStep+=1;
+    function next() {
+        if (currentStep < 4) {
+            currentStep += 1;
             check();
         }
     }
 
-    function check(){
+    function check() {
         switch (currentStep) {
             case 1:
                 stepOne();
@@ -929,14 +936,14 @@
 
     }
 
-    
-    document.getElementById("logo").onclick = function() {
+
+    document.getElementById("logo").onclick = function () {
         console.log("clicked");
 
         var sectionTwo = document.getElementById('sectionTwo');
         sectionTwo.scrollTop = 0;
     }
- 
+
 
 </script>
 
@@ -944,5 +951,3 @@
 
 
 <script type="text/javascript" src="js/materialize.min.js"></script>
-
-
