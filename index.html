@@ -23,17 +23,20 @@
 <body onload="calculateAfterDiscounts(),mobileView(),check()">
 
 
+    <div id="stepper" class="stepper" onclick="next()">
+        <button class="waves-effect waves-light btn">Next</button>
+    </div>
 
     <div class="wrapper">
+        <div class="sectionOne" id="sectionOne" role='navigation' title="PiesShares INC logo">
 
-        <div class="sectionOne" id="sectionOne" role='navigation'>
-
-            <div class="img_header">
-                         
-                 <img id ="logo" src="assets/pieshares_logo.png" >
-   
-            </div>
+            
             <div class="tableOne" id="tableOne">
+                <div class="img_header">
+                             
+                    <img id ="logo" src="assets/pieshares_logo.png" > 
+                </div>
+                
                 <table class="highlight">
                     <thead>
                         <tr>
@@ -151,10 +154,6 @@
 
                     </tbody>
                 </table>
-
-                <div id="stepper" class="stepper" onclick="next()">
-                    <button class="waves-effect waves-light btn">Next</button>
-                </div>
             </div>
             
 
@@ -193,7 +192,7 @@
             <!-- Virtual Campaign Revenu Projection -->
             <div class="tableTwo" id="tableTwo">
                 <table class="highlight">
-                    <caption>Virtual Campaign Revenue</caption>
+                    <caption>Hosted Virtual Campaign Revenue</caption>
                     <thead>
                         <tr>
                             <th>
@@ -631,7 +630,7 @@
             s2 +
             s3 +
             s4 +
-            s5);
+            s5+.00).toFixed(2);
 
 
         // calculate 6% Guaranteed to Nonprofit Campaign Host
@@ -774,7 +773,7 @@
         if (Number(valNoneR6C1) == 0) { Split11.innerText = 0.00; s11 = 0; } else { Split11.innerText = 0.50; s11 = 0.50; }
 
 
-        Split12.innerText = (s7 + s8 + s9 + s10 + s11);
+        Split12.innerText = (s7 + s8 + s9 + s10 + s11+.00).toFixed(2);
 
         resultSplitNone1.innerText = Math.ceil(
             0.02 * Number(outputFourVal) * (valNoneR2C1 / 100)
@@ -863,7 +862,7 @@
     var currentStep = 1;
 
     function stepOne(){
-       
+
        document.getElementById("tableTwo").style.opacity = "50%";
        document.getElementById("tableThree").style.opacity = "50%";
        document.getElementById("tableFour").style.opacity = "50%";
@@ -873,23 +872,33 @@
         
     }
 
+    // steper function to help navigate the tables
     function stepTwo(){
+       document.getElementById("tableOne").style.opacity =  "50%";
        document.getElementById("tableTwo").style.opacity =  "100%";
        document.getElementById("tableThree").style.opacity = "50%";
        document.getElementById("tableFour").style.opacity =  "50%";
 
     }
     function stepThree(){
-       document.getElementById("tableTwo").style.opacity =  "100%";
+
+       document.getElementById("tableOne").style.opacity =  "50%";
+       document.getElementById("tableTwo").style.opacity =  "50%";
        document.getElementById("tableThree").style.opacity = "100%";
        document.getElementById("tableFour").style.opacity =  "50%";
+       
+       var myElement = document.getElementById('tableThree');
+       var topPos = myElement.offsetTop;
+       document.getElementById("sectionTwo").scrollTop = topPos;
     }
 
     function stepFour(){
-      
-       document.getElementById("tableTwo").style.opacity =  "100%";
+       document.getElementById("tableOne").style.opacity =  "100%";
+       document.getElementById("tableTwo").style.opacity =   "100%";
        document.getElementById("tableThree").style.opacity = "100%";
        document.getElementById("tableFour").style.opacity =  "100%";
+
+       window.scrollTo(0,document.body.scrollHeight);
        document.getElementById("stepper").remove();
     }
 
@@ -903,39 +912,22 @@
     function check(){
         switch (currentStep) {
             case 1:
-                console.log("step1");
                 stepOne();
                 break;
             case 2:
-                console.log("step2");
                 stepTwo();
                 break;
 
             case 3:
-                console.log("step3");
                 stepThree();
                 break;
 
             case 4:
-                console.log("step4");
                 stepFour();
                 break;
         }
 
     }
-
-
-
-    function Stepper(){
-        Stepper = function(){}; // kill it as soon as it was called
-        
-        //Step 1 Assumptions: Hosted Virtual Campaigns
-        //Step 2 Assumptions: Hosted Virtual Campaigns' Revenue
-        //Step 3 Assumptions: Non-Hosted Virtual Campaigns' Revenue
-        //Step 4 Results: Total Revenue
-        
-
-    };
 
     
     document.getElementById("logo").onclick = function() {
@@ -952,3 +944,6 @@
 
 
 <script type="text/javascript" src="js/materialize.min.js"></script>
+
+
+
