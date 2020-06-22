@@ -62,7 +62,7 @@ table > caption {
 
 .stepper{
     float: right;
-    margin:0.5em;
+    margin:1em;
     
     button {
         width: 100px;
@@ -107,15 +107,13 @@ body {
     
     .img_header{
         margin: auto;
-        align-items: center;
-    
+
+
         img:hover {
             cursor: pointer;
         }
         img{
-            
-            max-width: 5vw; 
-            max-height: 5vh;
+            margin-top: 2em;
         }
     }
    
