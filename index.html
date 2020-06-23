@@ -81,7 +81,7 @@
                                 <p>
                                     <span>Total Spent by Shoppers After
                                         Discounts: </span>
-                                    <span style="float: right; margin-right: 35px;">
+                                    <span style=" margin-left: 42px;">
                                         <span style="color: #81cf44; ">$</span>
                                         <span id="result"></span>
                                     </span>
@@ -106,9 +106,6 @@
                                 Sources
                             </th>
                             <th>
-                                Percentage Earned
-                            </th>
-                            <th>
                                 Revenue Earned
                             </th>
                         </tr>
@@ -117,9 +114,6 @@
                         <tr>
                             <td>
                                 Hosted Virtual Campaigns
-                            </td>
-                            <td>
-                                <span id="splitsT1R6"></span>%
                             </td>
                             <td>
                                 <span style="color: #81cf44;">$</span>
@@ -131,9 +125,6 @@
                                 Non-Hosted Virtual Campaigns
                             </td>
                             <td>
-                                <span id="splitsT2R12"></span>%
-                            </td>
-                            <td>
                                 <span style="color: #81cf44;">$</span>
                                 <span id="resultRevenueNoneTotal"></span>
                             </td>
@@ -142,8 +133,7 @@
                             <td>
                                 <span style="font-size: 1.4vw;"> Possible Total Revenue per Year: </span>
                             </td>
-                            <td>
-                            </td>
+                           
                             <td>
                                 <div class="resultTotal">
                                     <span style="color: #81cf44;">$</span>
@@ -178,6 +168,7 @@
                 <span id="splitsT1R3"></span>%
                 <span id="splitsT1R4"></span>%
                 <span id="splitsT1R5"></span>%
+                <span id="splitsT1R6"></span>%
 
                 <span id="resultRevenue"></span>
 
@@ -186,6 +177,9 @@
                 <span id="splitsT2R9"></span>%
                 <span id="splitsT2R10"></span>%
                 <span id="splitsT2R11"></span>%
+
+                    <span id="splitsT2R12"></span>%
+         
 
                 <span id="resultRevenueNone"></span>
             </div>
@@ -869,7 +863,7 @@
         document.getElementById("tableOne").style.backgroundColor = "red!important";
 
 
-        document.getElementById("navButton").innerText = "1 of 3";
+        document.getElementById("navButton").innerText = "1 of 4";
 
     }
 
@@ -880,7 +874,7 @@
         document.getElementById("tableThree").style.opacity = "30%";
         document.getElementById("tableFour").style.opacity = "30%";
 
-        document.getElementById("navButton").innerText = "2 of 3";
+        document.getElementById("navButton").innerText = "2 of 4";
         var myElement = document.getElementById('tableTwo');
         var topPos = myElement.offsetTop;
         document.getElementById("sectionTwo").scrollTop = topPos;
@@ -893,7 +887,7 @@
         document.getElementById("tableThree").style.opacity = "100%";
         document.getElementById("tableFour").style.opacity = "30%";
 
-        document.getElementById("navButton").innerText = "3 of 3";
+        document.getElementById("navButton").innerText = "3 of 4";
 
         var myElement = document.getElementById('tableThree');
         var topPos = myElement.offsetTop;
@@ -906,7 +900,6 @@
         document.getElementById("tableThree").style.opacity = "100%";
         document.getElementById("tableFour").style.opacity = "100%";
 
-        document.getElementById("navButton").innerText = "4 of 4";
 
         window.scrollTo(0, document.body.scrollHeight);
         document.getElementById("stepper").remove();
