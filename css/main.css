@@ -79,8 +79,6 @@ table > caption {
 }
 
 .tableOne {
-  /*  height: 40vh;
-    max-height: 40% ; */
   width: 30vw;
   min-width: 10vw;
 }
@@ -99,12 +97,9 @@ table > caption {
 
 .tableFour {
   margin-top: 1em;
-  /*  margin-top: 3em;
-    height: 40vh;
-    max-height: 40%; */
   width: 30vw;
   min-width: 10vw;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 
 .wrapper {
@@ -193,6 +188,8 @@ table > caption {
       justify-content: space-around;
   margin-left: 2em;
   height: 100vh;
+  max-height: 100vh;
+  min-height: 50vh;
 }
 
 .sectionOne #sectionOne {
@@ -226,5 +223,9 @@ table > caption {
 
 .sectionOne table input {
   font-size: 1vw !important;
+}
+
+.sectionOne table .slider {
+  height: 0px;
 }
 /*# sourceMappingURL=main.css.map */
