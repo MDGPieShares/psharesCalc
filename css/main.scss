@@ -56,6 +56,7 @@ th td {
 table > caption {
 
     margin-bottom: 0.5em;
+    color: #69cde6;
 }
 
 
@@ -79,15 +80,22 @@ table > caption {
     
    /*  height: 40vh;
     max-height: 40% ; */
+   
 }
 
 
 .tableTwo {
   /*   max-width: 70vw; */
+  max-width: 70vw;
+  min-width: 30vw;
     
 }
 .tableThree {
    /*  max-width: 70vw; */
+   max-width: 70vw;
+  min-width: 30vw;
+
+
 }
 
 // Total (Sticky with One)
@@ -95,6 +103,8 @@ table > caption {
    /*  margin-top: 3em;
     height: 40vh;
     max-height: 40%; */
+
+
     margin-bottom: 2em;
     
 }
@@ -120,16 +130,19 @@ body {
     overflow: hidden;
 
     height: 100%;
-    width: 100%;
+    width: 100vw; 
+    
     .img_header{
-        margin: auto;
-
+        display: block;
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
 
         img:hover {
             cursor: pointer;
         }
         img{
-            margin-top: 2em;
+           
         }
     }
     
@@ -196,7 +209,7 @@ body {
     flex-direction: column;
     justify-content: space-around;
     margin-left: 2em;
-    max-width:100%;
+    // max-width:100%;
     height:100%;
 
     #sectionOne{
@@ -211,12 +224,15 @@ body {
         border-collapse: collapse !important;
         border-spacing: 0 !important;
        
-
         tr,td,th{
             font-size: 1vw!important;
         }
         label,span{
             font-size: 1vw!important;
+        }
+
+        caption{
+            font-size: 1.2vw!important;
         }
 
         #total,#result{

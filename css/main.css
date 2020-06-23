@@ -60,6 +60,7 @@ th td {
 
 table > caption {
   margin-bottom: 0.5em;
+  color: #69cde6;
 }
 
 .stepper {
@@ -83,10 +84,14 @@ table > caption {
 
 .tableTwo {
   /*   max-width: 70vw; */
+  max-width: 70vw;
+  min-width: 30vw;
 }
 
 .tableThree {
   /*  max-width: 70vw; */
+  max-width: 70vw;
+  min-width: 30vw;
 }
 
 .tableFour {
@@ -112,20 +117,19 @@ table > caption {
           justify-content: space-evenly;
   overflow: hidden;
   height: 100%;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 
 .wrapper .img_header {
-  margin: auto;
+  display: block;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .wrapper .img_header img:hover {
   cursor: pointer;
-}
-
-.wrapper .img_header img {
-  margin-top: 2em;
 }
 
 * {
@@ -189,7 +193,6 @@ table > caption {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-left: 2em;
-  max-width: 100%;
   height: 100%;
 }
 
@@ -211,6 +214,10 @@ table > caption {
 
 .sectionOne table label, .sectionOne table span {
   font-size: 1vw !important;
+}
+
+.sectionOne table caption {
+  font-size: 1.2vw !important;
 }
 
 .sectionOne table #total, .sectionOne table #result {

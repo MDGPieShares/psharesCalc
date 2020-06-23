@@ -640,7 +640,7 @@
             s2 +
             s3 +
             s4 +
-            s5);
+            s5 + .00).toFixed(2);
 
 
         // calculate 6% Guaranteed to Nonprofit Campaign Host
@@ -783,7 +783,7 @@
         if (Number(valNoneR6C1) == 0) { Split11.innerText = 0.00; s11 = 0; } else { Split11.innerText = 0.50; s11 = 0.50; }
 
 
-        Split12.innerText = (s7 + s8 + s9 + s10 + s11);
+        Split12.innerText = (s7 + s8 + s9 + s10 + s11 + .00).toFixed(2);
 
         resultSplitNone1.innerText = Math.ceil(
             0.02 * Number(outputFourVal) * (valNoneR2C1 / 100)
