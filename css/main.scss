@@ -81,20 +81,22 @@ table > caption {
     
    /*  height: 40vh;
     max-height: 40% ; */
+    width:30vw;
+    min-width: 10vw;
    
 }
 
 
 .tableTwo {
   /*   max-width: 70vw; */
-  max-width: 70vw;
+  width: 60vw;
   min-width: 30vw;
     
 }
 .tableThree {
    /*  max-width: 70vw; */
-   max-width: 70vw;
-  min-width: 30vw;
+   width: 60vw;
+   min-width: 30vw;
 
 
 }
@@ -105,6 +107,8 @@ table > caption {
     /*  margin-top: 3em;
     height: 40vh;
     max-height: 40%; */
+    width:30vw;
+    min-width: 10vw;
 
 
     margin-bottom: 2em;
