@@ -103,6 +103,7 @@ table {
   height: 14vh;
   display: block;
   border-radius: 2em;
+  margin-bottom: 3rem;
 }
 
 .footerTotal table {
