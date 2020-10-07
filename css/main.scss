@@ -67,12 +67,11 @@ table > caption {
     right: 0;
     float: right;
     margin:3.5em;
-    
-    button {
-        width: 100px;
-        height: 50px;
 
-        max-height: 60px;
+    input {
+        white-space: normal;
+        border: none;
+        outline: none;
     }
 }
 
@@ -125,7 +124,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     overflow: hidden;
 
@@ -133,16 +132,8 @@ body {
     width: 100vw; 
     
     .img_header{
-        display: block;
-        margin-top: auto;
-        margin-left: auto;
-        margin-right: auto;
-
         img:hover {
             cursor: pointer;
-        }
-        img{
-           
         }
     }
     
@@ -207,12 +198,10 @@ body {
 .sectionOne {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     margin-left: 2em;
     // max-width:100%;
-    height:100vh;
-    max-height: 100vh;
-    min-height: 50vh;
+    height:110vh;
 
 
     #sectionOne{
@@ -253,5 +242,28 @@ body {
         }
 
         
+    }
+}
+
+
+.nav{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    z-index: 50;
+    justify-content: center;
+    
+        background: #fdfff5;
+        background: radial-gradient(#ffffff, #fdfff5);
+
+      
+    img{
+      width: 10vw;
+      margin-right: 2em;
+    }
+
+    img:hover{
+        cursor: pointer;
     }
 }

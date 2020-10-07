@@ -37,18 +37,11 @@
         <div class="tableOne">
             <table class="highlight">
 
-                <thead>
-                    <tr>
-                        <th>
-                            Hosted Virtual Campaigns
-                        </th>
-                    </tr>
-                </thead>
                 <tr>
                     <td>
 
                         <label><span id="displayRangeOne">4</span>
-                            Campaigns per Year</label>
+                            Hosted Virtual Campaigns per Year</label>
                         <input type="range" min="1" max="6" value="4" class="slider" id="myRangeOne" />
                     </td>
                 </tr>
@@ -57,7 +50,7 @@
                     <td>
 
                         <label>
-                            Members and Supporters per Campaign
+                            Shoppers per Virtual Campaign
                         </label>
                         <input id="myRangeTwo" class="input-field" type="number" value="100" />
                     </td>
@@ -120,23 +113,23 @@
                 <thead>
                     <tr>
                         <th>
-                            % Split
+                            Revenue Split
                         </th>
                         <th>
                             Virtual Campaign
                         </th>
                         <th>
-                            Revenue
+                            Revenue Earned
                         </th>
                         <th>
-                            Assumptions
+                            Percentage Eligible for Revenue Split
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>6.00%</td>
-                        <td>Guaranteed to Nonprofit Campaign Host</td>
+                        <td>6.0%</td>
+                        <td>Nonprofit Campaign Host</td>
                         <td>
                             <p>
 
@@ -144,16 +137,16 @@
                                 <span id="resultSplit1"></span>
                             </p>
                         </td>
-                        <td></td>
-                        <td></td>
+                        <td><span style="font-weight: bold;">100%</span> Guaranteed as Virtual Campaign Host</td>
+                        
                     </tr>
                     <tr>
                         <td>
 
-                            <span>2.00%</span>
+                            <span>2.0%</span>
                         </td>
 
-                        <td> Favorite Nonprofit of Shopper</td>
+                        <td>Favorite Nonprofit of Shopper</td>
                         <td>
                             <p>
 
@@ -166,7 +159,7 @@
                                 <p>
 
                                     <span id="displayRangeR2C1">50</span>% of
-                                    Shoppers select your Nonprofit
+                                    Shoppers selected your Nonprofit
                                     as their Favorite
                                 </p>
                             </label>
@@ -176,7 +169,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <span>2.00%</span>
+                            <span>2.0%</span>
                         </td>
 
                         <td> Favorite Nonprofit of Business</td>
@@ -189,7 +182,7 @@
                                 <p>
 
                                     <span id="displayRangeR3C1">95</span>% of
-                                    Businesses select your Nonprofit
+                                    Businesses selected your Nonprofit
                                     as their Favorite
                                 </p>
                             </label>
@@ -200,10 +193,10 @@
                     <tr>
                         <td>
 
-                            <span>0.50%</span>
+                            <span>0.5%</span>
                         </td>
                         <td>
-                            Shopper referral was assigned to Nonprofit
+                            Shopper Referral
                         </td>
                         <td>
                             <p>
@@ -217,7 +210,7 @@
                                 <p>
 
                                     <span id="displayRangeR4C1">70</span>% of
-                                    Shoppers select your Nonprofit
+                                    Shoppers selected your Nonprofit
                                     as the referral
                                 </p>
                             </label>
@@ -227,11 +220,11 @@
                     <tr>
                         <td>
 
-                            <span>0.50%</span>
+                            <span>0.5%</span>
                         </td>
 
                         <td>
-                            Business referral was assigned to Nonprofit
+                            Business Referral
                         </td>
                         <td>
                             <p>
@@ -244,7 +237,7 @@
                             <label>
 
                                 <span id="displayRangeR5C1">70</span>% of
-                                Businesses select your Nonprofit
+                                Businesses selected your Nonprofit
                                 as the referral
                             </label>
                             <input type="range" min="0" max="100" value="70" step="5" class="slider" id="myRangeR5C1" />
@@ -267,7 +260,7 @@
                 <thead>
                     <tr>
                         <th>
-                            % Split
+                            Revenue Split
                         </th>
                         <th>
                             Virtual Campaign
@@ -276,7 +269,7 @@
                             Revenue Received
                         </th>
                         <th>
-                            Assumptions
+                            Percentage Eligible for Revenue Split
                         </th>
                         <th>
 
@@ -286,7 +279,7 @@
                 <tr>
 
                     <td>
-                        <span>2.00%</span>
+                        <span>2.0%</span>
                     </td>
 
                     <td>Favorite Nonprofit of Shopper</td>
@@ -307,15 +300,13 @@
                         </label>
                         <input type="range" min="0" max="100" value="10" step="5" class="slider" id="myRangeNoneR2C1" />
                     </td>
-                    <td>
-
-                    </td>
+                   
                 </tr>
 
                 <tr>
 
                     <td>
-                        <span>2.00%</span>
+                        <span>2.0%</span>
                     </td>
 
                     <td>Favorite Nonprofit of Business</td>
@@ -336,11 +327,11 @@
                         </label>
                         <input type="range" min="0" max="100" value="5" step="5" class="slider" id="myRangeNoneR3C1" />
                     </td>
-                    <td></td>
+                    
                 </tr>
                 <tr>
                     <td>
-                        <span>0.50%</span>
+                        <span>0.5%</span>
                     </td>
 
                     <td>
@@ -357,7 +348,7 @@
                         <label>
 
                             <span id="displayRangeNoneR4C1">70</span>% of
-                            Shoppers select your Nonprofit as
+                            Shoppers selected your Nonprofit as
                             the referral
                         </label>
                         <input type="range" min="0" max="100" value="70" step="5" class="slider" id="myRangeNoneR4C1" />
@@ -365,7 +356,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <span>0.50%</span>
+                        <span>0.5%</span>
                     </td>
 
                     <td>
@@ -382,7 +373,7 @@
                         <label>
 
                             <span id="displayRangeNoneR5C1">70</span>% of
-                            Businesses select your Nonprofit as
+                            Businesses selected your Nonprofit as
                             the referral
                         </label>
 
@@ -392,11 +383,11 @@
                 <tr>
 
                     <td>
-                        <span>0.50%</span>
+                        <span>0.5%</span>
                     </td>
 
                     <td>
-                        Nonprofit referral was assigned to Nonprofit
+                        Nonprofit Referral
                     </td>
                     <td>
                         <p>
@@ -409,7 +400,7 @@
                         <label>
 
                             <span id="displayRangeNoneR6C1">0</span>% of the
-                            Nonprofits hosting Virtual Campaigns select your
+                            Nonprofits hosting Virtual Campaigns selected your
                             Nonprofit as the referral
                         </label>
                         <input type="range" min="0" max="100" value="0" step="5" class="slider" id="myRangeNoneR6C1" />
@@ -432,10 +423,7 @@
                             Sources
                         </th>
                         <th>
-                            Percentage Earned
-                        </th>
-                        <th>
-                            Received
+                            Revenue Earned
                         </th>
                     </tr>
                 </thead>

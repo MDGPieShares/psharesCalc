@@ -72,10 +72,10 @@ table > caption {
   margin: 3.5em;
 }
 
-.stepper button {
-  width: 100px;
-  height: 50px;
-  max-height: 60px;
+.stepper input {
+  white-space: normal;
+  border: none;
+  outline: none;
 }
 
 .tableOne {
@@ -106,20 +106,13 @@ table > caption {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   overflow: hidden;
   height: 100%;
   width: 100vw;
   height: 100vh;
-}
-
-.wrapper .img_header {
-  display: block;
-  margin-top: auto;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .wrapper .img_header img:hover {
@@ -184,12 +177,11 @@ table > caption {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-left: 2em;
-  height: 100vh;
-  max-height: 100vh;
-  min-height: 50vh;
+  height: 110vh;
 }
 
 .sectionOne #sectionOne {
@@ -227,5 +219,32 @@ table > caption {
 
 .sectionOne table .slider {
   height: 0px;
+}
+
+.nav {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  z-index: 50;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #fdfff5;
+  background: radial-gradient(#ffffff, #fdfff5);
+}
+
+.nav img {
+  width: 10vw;
+  margin-right: 2em;
+}
+
+.nav img:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */
