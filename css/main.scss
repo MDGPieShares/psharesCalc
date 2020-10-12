@@ -79,7 +79,6 @@ table > caption {
 // Inital (Sticky One)
 .tableOne {
 
-    margin-top: 2rem;
     width:30vw;
     min-width: 10vw;
    margin-top: 5.6rem;
@@ -91,7 +90,7 @@ table > caption {
   /*   max-width: 70vw; */
   width: 60vw;
   min-width: 30vw;
-    
+
 }
 .tableThree {
    /*  max-width: 70vw; */
@@ -111,7 +110,20 @@ table > caption {
     
 }
 
+@media screen and (min-width: 1024px) and (min-height: 1320px) {
+    /* iPad Pro */
+    .sectionOne {
+        overflow: scroll!important;
+    }
+   
+}
 
+@media screen and (min-width: 1024px) and (max-height: 1310px) {
+    /* Laptop */
+    sectionOne {
+        overflow: scroll!important;
+    }
+}
 
 
 
