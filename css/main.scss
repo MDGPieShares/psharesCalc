@@ -79,9 +79,11 @@ table > caption {
 // Inital (Sticky One)
 .tableOne {
 
+    margin-top: 2rem;
     width:30vw;
     min-width: 10vw;
-   
+   margin-top: 5.6rem;
+
 }
 
 
@@ -96,7 +98,6 @@ table > caption {
    width: 60vw;
    min-width: 30vw;
 
-
 }
 
 // Total (Sticky with One)
@@ -105,8 +106,7 @@ table > caption {
     
     width:30vw;
     min-width: 10vw;
-
-
+    flex: 20%;
     margin-bottom: 3em;
     
 }
@@ -202,7 +202,9 @@ body {
     justify-content: center;
     margin-left: 2em;
     // max-width:100%;
-    height:110vh;
+    height:100%;
+    flex: 25%;
+    
 
 
     #sectionOne{

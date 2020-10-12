@@ -80,8 +80,10 @@ table > caption {
 }
 
 .tableOne {
+  margin-top: 2rem;
   width: 30vw;
   min-width: 10vw;
+  margin-top: 5.6rem;
 }
 
 .tableTwo {
@@ -100,6 +102,9 @@ table > caption {
   margin-top: 1em;
   width: 30vw;
   min-width: 10vw;
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%;
   margin-bottom: 3em;
 }
 
@@ -182,7 +187,10 @@ table > caption {
       -ms-flex-pack: center;
           justify-content: center;
   margin-left: 2em;
-  height: 110vh;
+  height: 100%;
+  -webkit-box-flex: 25%;
+      -ms-flex: 25%;
+          flex: 25%;
 }
 
 .sectionOne #sectionOne {
