@@ -47,7 +47,7 @@ input[type=number] {
       -ms-flex-align: center;
           align-items: center;
   white-space: nowrap;
-  font-size: 1vw;
+  font-size: 1vh;
   margin-bottom: 1rem;
 }
 
@@ -223,6 +223,7 @@ table > caption {
 }
 
 .nav {
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

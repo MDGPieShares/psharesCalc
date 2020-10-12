@@ -39,7 +39,7 @@ input[type=number] {
 .resultTotal {
     align-items: center;
     white-space:nowrap;
-    font-size: 1vw;
+    font-size: 1vh;
     margin-bottom: 1rem;
 }
 
@@ -247,7 +247,7 @@ body {
 
 
 .nav{
-
+    position: fixed;
     display: flex;
     flex-direction: row;
     width: 100%;
