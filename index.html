@@ -11,8 +11,6 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="text/javascript" src="jquery-3.3.1.js"></script>
-    <script src="js/main.js"></script>
 
     <!--Favicon-->
     <link rel="icon" href="/assets/favicon-16x16.png" sizes="16x16">
@@ -22,22 +20,16 @@
 
 <body onload="calculateAfterDiscounts(),check()">
 
+        <div class="switcher">
+            <input type="checkbox" hidden="hidden" id="advance" onclick="advanceOn()">
+            <label class="switch" for="advance">Advance</label>
+        </div>
 
-    <div id="stepper" class="stepper" onclick="next()">
-        <input  class="waves-effect waves-light btn" type="button" id="navButton" value="Next 1 of 3"/>
+        <div id="stepper" class="stepper" onclick="next()" hidden>
+            <input  class="waves-effect waves-light btn" type="button" id="navButton" value="Next 1 of 3"/>
+        </div>
     
-    </div>
 
-    <div class ="nav">
-        <div class="img_header">
-
-            <img id="logo" src="assets/pieshares_logo.png" >
-        </div>
-
-        <div class="header">
-                <p id="calc_Title">Projection Calculator for Nonprofits</p>
-            
-        </div>
     </div>
 
     <div class="wrapper">
@@ -154,7 +146,7 @@
 
 
         <!-- Virtual Campaign Revenu Projection -->
-        <div class="sectionTwo" id="sectionTwo">
+        <div class="sectionTwo" id="sectionTwo" hidden>
 
             <div class="holder" style=" visibility: hidden;">
 
@@ -494,7 +486,7 @@
     var outputThree = document.getElementById("displayRangeThree");
 
     var numShopper;
-
+    
     sliderOne.oninput = function () {
         outputOne.innerHTML = this.value;
         calculateAfterDiscounts();
@@ -826,22 +818,6 @@
     }
 
 
-    /* // detect mobile phone
-    function mobileView() {
-        if (
-            typeof window.orientation !== "undefined" ||
-            navigator.userAgent.indexOf("IEMobile") !== -1
-        ) {
-            console.log("mobile");
-            document.location = "mobile.html";
-            // is a mobile
-
-        } else {
-            // not mobile
-            console.log("not mobile");
-        }
-    } */
-
 
     // stepper for first using the website 
     var currentStep = 1;
@@ -851,7 +827,6 @@
         document.getElementById("tableOne").style.opacity = "100%";
         document.getElementById("tableTwo").style.opacity = "30%";
         document.getElementById("tableThree").style.opacity = "30%";
-        document.getElementById("tableFour").style.opacity = "30%";
 
         // highlight border
         document.getElementById("tableOne").style.backgroundColor = "red!important";
@@ -866,7 +841,6 @@
         document.getElementById("tableOne").style.opacity = "30%";
         document.getElementById("tableTwo").style.opacity = "100%";
         document.getElementById("tableThree").style.opacity = "30%";
-        document.getElementById("tableFour").style.opacity = "30%";
 
         document.getElementById("navButton").value = "Next 2 of 3";
         var myElement = document.getElementById('tableTwo');
@@ -933,6 +907,20 @@
     document.getElementById("logo").onclick = function () {
         var sectionTwo = document.getElementById('sectionTwo');
         sectionTwo.scrollTop = 0;
+    }
+
+    var advanceState = false;
+    
+    function advanceOn() {
+        advanceState = !advanceState;
+        if (advanceState === true) {
+            document.getElementById('sectionTwo').removeAttribute('hidden');
+            document.getElementById('stepper').removeAttribute('hidden');
+        } else {
+            document.getElementById('sectionTwo').setAttribute('hidden', '');
+            document.getElementById('stepper').setAttribute('hidden', '');
+        }
+
     }
 
 

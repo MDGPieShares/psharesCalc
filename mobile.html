@@ -33,6 +33,11 @@
             <div>
                 <p id="calc_Title">Projection Calculator for Nonprofits</p>
             </div>
+
+            <div class="switcher">
+                <input type="checkbox" hidden="hidden" id="advance" onclick="advanceOn()">
+                <label class="switch" for="advance">Advance</label>
+            </div>
         </div>
         <div class="tableOne">
             <table class="highlight">
@@ -107,7 +112,7 @@
         </div>
 
         <!-- Virtual Campaign Revenu Projection -->
-        <div class="tableTwo">
+        <div class="tableTwo" id="tableTwo" hidden>
             <table class="highlight">
                 <caption>Hosted Virtual Campaign Revenue</caption>
                 <thead>
@@ -254,7 +259,7 @@
 
         <!-- =======Revenue: Non-Hosted Virtual Campaigns Projection================================ -->
 
-        <div class="tableThree">
+        <div class="tableThree" id="tableThree" hidden>
             <table class="highlight">
                 <caption>Non-Hosted Virtual Campaigns</caption>
                 <thead>
@@ -844,21 +849,22 @@
     function numberWithCommas(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
-    // detect mobile phone
-    /* function mobileView() {
-        if (
-            typeof window.orientation !== "undefined" ||
-            navigator.userAgent.indexOf("IEMobile") !== -1
-        ) {
-            console.log("mobile");
-            // is a mobile
+
+
+    var advanceState = false;
+    
+    function advanceOn() {
+        advanceState = !advanceState;
+        if (advanceState === true) {
+            document.getElementById('tableTwo').removeAttribute('hidden');
+            document.getElementById('tableThree').removeAttribute('hidden');
 
         } else {
-            // not mobile
-            console.log("not mobile");
-            document.location = "index.html";
+            document.getElementById('tableTwo').setAttribute('hidden', '');
+            document.getElementById('tableThree').setAttribute('hidden', '');
         }
-    } */
+
+    }
 </script>
 
 <script type="text/javascript" src="js/materialize.min.js"></script>

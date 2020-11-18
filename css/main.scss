@@ -61,7 +61,7 @@ table > caption {
 }
 
 
-.stepper{
+.stepper {
     z-index: 999;
     position: fixed;
     right: 0;
@@ -245,25 +245,49 @@ body {
     }
 }
 
-
-.nav{
+.switcher {
+    z-index: 999;
     position: fixed;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    z-index: 50;
-    justify-content: center;
-    
-        background: #fdfff5;
-        background: radial-gradient(#ffffff, #fdfff5);
-
-      
-    img{
-      width: 10vw;
-      margin-right: 2em;
+    left: 0;
+    float: left;
+    margin:3.5em;
+    .switch {
+        display: inline-block;
+        position: relative;
+        width: 130px;
+        height: 30px;
+        border-radius: 20px;
+        background: #dfd9ea;
+        transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    .switch::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 26px;
+        height: 26px;
+        background: #fafafa;
+        border-radius: 50%;
+        transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .switch:active::before {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.28), 0 0 0 20px rgba(128,128,128,0.1);
+    }
+    input:checked + .switch {
+        background: #72da67;
+    }
+    input:checked + .switch::before {
+        left: 102px;
+        background: #fff;
+    }
+    input:checked + .switch:active::before {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.28), 0 0 0 20px rgba(0,150,136,0.2);
     }
 
-    img:hover{
-        cursor: pointer;
+    label {
+        text-align: center;
     }
 }

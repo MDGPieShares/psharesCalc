@@ -75,6 +75,10 @@ table {
   width: 100%;
 }
 
+.tableFour {
+  margin-bottom: 5rem;
+}
+
 .tableFour tr td:last-child {
   width: 1%;
   white-space: nowrap;
@@ -124,5 +128,56 @@ table {
 
 .footerTotal table #resultTotal {
   white-space: nowrap;
+}
+
+.switcher .switch {
+  display: inline-block;
+  position: relative;
+  width: 130px;
+  height: 30px;
+  border-radius: 20px;
+  background: #dfd9ea;
+  -webkit-transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.switcher .switch::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 26px;
+  height: 26px;
+  background: #fafafa;
+  border-radius: 50%;
+  -webkit-transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.switcher .switch:active::before {
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(128, 128, 128, 0.1);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(128, 128, 128, 0.1);
+}
+
+.switcher input:checked + .switch {
+  background: #72da67;
+}
+
+.switcher input:checked + .switch::before {
+  left: 102px;
+  background: #fff;
+}
+
+.switcher input:checked + .switch:active::before {
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(0, 150, 136, 0.2);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(0, 150, 136, 0.2);
+}
+
+.switcher label {
+  text-align: center;
 }
 /*# sourceMappingURL=mainMobile.css.map */

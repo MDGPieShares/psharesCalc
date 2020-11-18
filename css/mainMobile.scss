@@ -71,7 +71,8 @@ table {
 
 // Total (Sticky with One)
 .tableFour {
-
+    
+    margin-bottom: 5rem;
 
     tr td:last-child{
         width:1%;
@@ -120,4 +121,46 @@ table {
     }
   }
   
+}
+
+.switcher {
+    .switch {
+        display: inline-block;
+        position: relative;
+        width: 130px;
+        height: 30px;
+        border-radius: 20px;
+        background: #dfd9ea;
+        transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    .switch::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 26px;
+        height: 26px;
+        background: #fafafa;
+        border-radius: 50%;
+        transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .switch:active::before {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.28), 0 0 0 20px rgba(128,128,128,0.1);
+    }
+    input:checked + .switch {
+        background: #72da67;
+    }
+    input:checked + .switch::before {
+        left: 102px;
+        background: #fff;
+    }
+    input:checked + .switch:active::before {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.28), 0 0 0 20px rgba(0,150,136,0.2);
+    }
+
+    label {
+        text-align: center;
+    }
 }
