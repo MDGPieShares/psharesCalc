@@ -249,8 +249,10 @@ body {
     z-index: 999;
     position: fixed;
     left: 0;
+    top: 0;
     float: left;
-    margin:3.5em;
+    margin-top: 5vh;
+    margin-left: 2rem;
     .switch {
         display: inline-block;
         position: relative;
