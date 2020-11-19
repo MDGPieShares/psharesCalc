@@ -40,6 +40,7 @@ table > caption {
 
 html, body {
   overflow-x: hidden !important;
+  height: 100% !important;
 }
 
 body {
@@ -107,7 +108,7 @@ table {
   height: 14vh;
   display: block;
   border-radius: 2em;
-  margin-bottom: 3rem;
+  margin-bottom: 0.5rem;
 }
 
 .footerTotal table {

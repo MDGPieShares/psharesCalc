@@ -36,6 +36,7 @@ table > caption {
 
 html,body{
     overflow-x: hidden!important;
+    height: 100%!important;
 }
 body {
     margin: 0;
@@ -100,7 +101,7 @@ table {
   display: block;
   border-radius: 2em;
 
-  margin-bottom: 3rem;
+  margin-bottom: 0.5rem;
 
   
   table{
