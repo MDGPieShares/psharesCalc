@@ -44,7 +44,7 @@
 
                             <label><span id="displayRangeOne" style="font-weight: bold;">4</span>
                                 Hosted Virtual Campaigns per Year</label>
-                            <input type="range" min="1" max="6" value="4" class="slider" id="myRangeOne" />
+                            <input type="range" min="1" max="6" value="2" class="slider" id="myRangeOne" />
                         </td>
                     </tr>
 
@@ -54,7 +54,7 @@
                             <label>
                                 Shoppers per Virtual Campaign
                             </label>
-                            <input id="myRangeTwo" class="input-field" type="text" data-type='number' value="100" />
+                            <input id="myRangeTwo" class="input-field" type="text" data-type='number' value="250" />
                         </td>
                     </tr>
 
@@ -64,7 +64,7 @@
                             <label> <span style="color: #81cf44;">$ </span><span id="displayRangeThree">100</span> Avg
                                 Shoppers Spend per Virtual Campaign After
                                 Discounts</label>
-                            <input id="myRangeThree" type="range" min="0" max="200" value="100" class="slider" />
+                            <input id="myRangeThree" type="range" min="0" max="200" value="50" class="slider" />
                         </td>
                     </tr>
 
@@ -216,12 +216,12 @@
                                 <label>
                                     <p>
 
-                                        <span id="displayRangeR2C1" style="font-weight: bold;">50</span>% of
+                                        <span id="displayRangeR2C1" style="font-weight: bold;">80</span>% of
                                         Shoppers selected your Nonprofit
                                         as their Favorite
                                     </p>
                                 </label>
-                                <input type="range" min="0" max="100" value="50" step="5" class="slider"
+                                <input type="range" min="0" max="100" value="80" step="5" class="slider"
                                     id="myRangeR2C1" />
                             </td>
                         </tr>
@@ -243,12 +243,12 @@
 
                                     <p>
 
-                                        <span id="displayRangeR3C1" style="font-weight: bold;">95</span>% of
+                                        <span id="displayRangeR3C1" style="font-weight: bold;">80</span>% of
                                         Businesses selected your Nonprofit
                                         as their Favorite
                                     </p>
                                 </label>
-                                <input type="range" min="0" max="100" value="95" step="5" class="slider"
+                                <input type="range" min="0" max="100" value="80" step="5" class="slider"
                                     id="myRangeR3C1" />
                             </td>
                         
@@ -278,7 +278,7 @@
                                         as the referral
                                     </p>
                                 </label>
-                                <input type="range" min="0" max="100" value="95" step="5" class="slider"
+                                <input type="range" min="0" max="100" value="70" step="5" class="slider"
                                     id="myRangeR4C1" />
                             </td>
                         </tr>
@@ -357,10 +357,10 @@
                         <td>
                             <label>
 
-                                <span id="displayRangeNoneR2C1" style="font-weight:bold;">10</span>% of your
+                                <span id="displayRangeNoneR2C1" style="font-weight:bold;">5</span>% of your
                                 Shoppers spending in other Virtual Campaigns.
                             </label>
-                            <input type="range" min="0" max="100" value="10" step="5" class="slider"
+                            <input type="range" min="0" max="100" value="5" step="5" class="slider"
                                 id="myRangeNoneR2C1" />
                         </td>
                        
@@ -403,11 +403,11 @@
                         <td>
                             <label>
 
-                                <span id="displayRangeNoneR4C1" style="font-weight: bold;">70</span>% of
+                                <span id="displayRangeNoneR4C1" style="font-weight: bold;">5</span>% of
                                 Shoppers selected your Nonprofit as
                                 the referral
                             </label>
-                            <input type="range" min="0" max="100" value="70" step="5" class="slider"
+                            <input type="range" min="0" max="100" value="5" step="5" class="slider"
                                 id="myRangeNoneR4C1" />
                         </td>
                     </tr>
@@ -426,12 +426,12 @@
                         <td>
                             <label>
 
-                                <span id="displayRangeNoneR5C1" style="font-weight: bold;">70</span>% of
+                                <span id="displayRangeNoneR5C1" style="font-weight: bold;">5</span>% of
                                 Businesses selected your Nonprofit as
                                 the referral
                             </label>
 
-                            <input type="range" min="0" max="100" value="70" step="5" class="slider"
+                            <input type="range" min="0" max="100" value="5" step="5" class="slider"
                                 id="myRangeNoneR5C1" />
                         </td>
                     </tr>
@@ -846,7 +846,6 @@
         var myElement = document.getElementById('tableTwo');
         var topPos = myElement.offsetTop;
         document.getElementById("sectionTwo").scrollTop = topPos;
-
     }
     function stepThree() {
 
